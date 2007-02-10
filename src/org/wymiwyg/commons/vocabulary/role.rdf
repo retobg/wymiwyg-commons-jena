@@ -54,10 +54,12 @@
 		<rdfs:comment xml:lang="en">Indicates the group in which the participation described 
 		by the subject takes place</rdfs:comment>
 		<rdfs:domain>
-			<owl:unionOf rdf:parseType="Collection">
-				<owl:Class rdf:about="#Participation" />
-				<owl:Class rdf:about="#Role" />
-			</owl:unionOf>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#Participation" />
+					<owl:Class rdf:about="#Role" />
+				</owl:unionOf>
+			</owl:Class>
 		</rdfs:domain>
 		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
 		<owl:inverseOf rdf:resource="#hasParticipation"/>
