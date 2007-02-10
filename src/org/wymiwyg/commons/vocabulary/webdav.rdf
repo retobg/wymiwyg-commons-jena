@@ -1,0 +1,26 @@
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns="http://wymiwyg.org/ontologies/webdav#" 
+	xml:base="http://wymiwyg.org/ontologies/webdav">
+	
+	<rdfs:Class rdf:ID="Resource">
+		<rdfs:label xml:lang="en">Resource</rdfs:label>
+		<rdfs:comment xml:lang="en">A DAV compliant resource according to RFC 2518</rdfs:comment>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:ID="Collection">
+		<rdfs:label xml:lang="en">Collection</rdfs:label>
+		<rdfs:comment xml:lang="en">A DAV compliant collection-resource according to RFC 2518</rdfs:comment>
+		<rdfs:subclassOf rdf:resource="#Resource" />
+	</rdfs:Class>
+	
+	<rdf:Property rdf:ID="member">
+		<rdfs:label>member</rdfs:label>
+		<rdfs:comment>point to a member of the collection</rdfs:comment>
+		<rdfs:domain rdf:resource="#Collection"/>
+		<rdfs:range 
+			rdf:resource="#Resource"/>
+	</rdf:Property>
+
+</rdf:RDF>

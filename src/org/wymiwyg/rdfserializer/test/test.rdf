@@ -1,0 +1,42 @@
+<rdf:RDF xmlns:k.0="http://purl.org/rss/1.0/" xmlns:k.1="http://purl.org/rss/1.0/modules/content/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:k.3="http://wymiwyg.org/ontologies/rss/image#" xmlns:k.2="http://purl.org/dc/elements/1.1/">
+<k.0:channel rdf:about="http://localhost:8585/rdf" >
+  <k.0:title xml:lang="en" >Example Channel</k.0:title>
+  <k.0:title xml:lang="de" >Beispiel Kanal</k.0:title>
+  <k.0:items>
+    <rdf:Seq>
+      <rdf:_1>
+        <k.0:item rdf:about="http://localhost:8585/rdf/2002/09/01" >
+          <k.0:title xml:lang="en" >News for September the First</k.0:title>
+          <k.1:items>
+            <rdf:Bag>
+              <rdf:_1>
+                <k.1:item>
+                  <k.1:encoding/>
+                  <rdf:value>
+An amazing story here.
+                    </rdf:value>
+                  <k.1:format/></k.1:item></rdf:_1></rdf:Bag></k.1:items>
+          <k.0:description xml:lang="en" >other things happened today</k.0:description>
+          <k.0:link>http://localhost:8585/rdf/2002/09/01</k.0:link>
+          <k.2:date>2002-09-01</k.2:date></k.0:item></rdf:_1>
+      <rdf:_2>
+        <k.0:item rdf:about="http://localhost:8585/rdf/2002/09/02" >
+          <k.0:title xml:lang="en" >News for September the Second</k.0:title>
+          <k.1:items>
+            <rdf:Bag>
+              <rdf:_1>
+                <k.1:item>
+                  <k.1:encoding/>
+                  <rdf:value>
+Another crazy story here.
+                    </rdf:value>
+                  <k.1:format/></k.1:item></rdf:_1></rdf:Bag></k.1:items>
+          <k.0:description xml:lang="en" >yet other things happened today</k.0:description>
+          <k.0:link>http://localhost:8585/rdf/2002/09/01</k.0:link>
+          <k.2:date>2002-09-02</k.2:date></k.0:item></rdf:_2></rdf:Seq></k.0:items>
+  <k.3:image>
+    <k.3:Image>
+      <k.3:link/>
+      <k.3:source/></k.3:Image></k.3:image>
+  <k.0:description xml:lang="en" >My example channel</k.0:description>
+  <k.0:link>http://localhost:8585/rdf</k.0:link></k.0:channel></rdf:RDF>

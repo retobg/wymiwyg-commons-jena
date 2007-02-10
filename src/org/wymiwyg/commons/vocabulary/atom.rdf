@@ -1,0 +1,37 @@
+
+<rdf:RDF
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:atom="https://bloged.dev.java.net/Ontologies/Atom/2005-01-03/"
+		xml:base="https://bloged.dev.java.net/Ontologies/Atom/2005-01-03/">
+
+	<rdfs:Class rdf:ID="Entry" rdfs:label="Entry">
+		<rdfs:comment xml:lang="en">An atom entry</rdfs:comment>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:ID="Content" rdfs:label="Content">
+		<rdfs:comment xml:lang="en">An atom content</rdfs:comment>
+	</rdfs:Class>
+	
+
+<!--  Property declarations   -->
+
+	<rdf:Property rdf:ID="title"
+			rdfs:label="title">
+		<rdfs:range rdf:resource="Content"/>
+		<rdfs:domain rdf:resource="Entry"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="content"
+			rdfs:label="content">
+		<rdfs:range rdf:resource="Content"/>
+		<rdfs:domain rdf:resource="Entry"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="representation"
+			rdfs:label="representation">
+	</rdf:Property>
+	
+	
+</rdf:RDF>

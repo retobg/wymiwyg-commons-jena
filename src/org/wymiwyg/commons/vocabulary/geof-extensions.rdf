@@ -1,0 +1,21 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:owl="http://www.w3.org/2002/07/owl#"
+		xmlns:geoF="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#"
+		xmlns="http://wymiwyg.org/ontologies/geof/extensions#"
+		xml:base="http://wymiwyg.org/ontologies/geof/extensions">
+	
+	<rdf:Property rdf:ID="code">
+		<rdfs:label xml:lang="en">code</rdfs:label>
+		<rdfs:comment xml:lang="en">A code for a SpatialThing, like a country or state-code</rdfs:comment>
+	</rdf:Property>
+	
+	<rdf:Property rdf:ID="primarySpaceThingOf">
+		<rdfs:label xml:lang="en">primarySpaceThingOf</rdfs:label>
+		<rdfs:comment xml:lang="en">A document with the subject as the space thing primarily
+		related to it. This is different than the primaryTopicOf as the latter could
+		be a political institution rather than a space-thing.</rdfs:comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	</rdf:Property>
+	
+</rdf:RDF>

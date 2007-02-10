@@ -1,0 +1,52 @@
+<!-- 
+RDF Schema declaration for RSS mod_content 1.0 <http://purl.org/rss/1.0/modules/content/>
+
+Note: this schema is represented in the RDF M&S abbreviated 
+syntax <http://www.w3.org/TR/REC-rdf-syntax/#abbreviatedSyntax> for 
+syntactic inclusion in an HTML/XHTML document
+ --> 
+
+<rdf:RDF 
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rss="http://purl.org/rss/1.0/"
+     xml:base="http://purl.org/rss/1.0/modules/content/">
+
+ <!--  Class declarations   --> 
+
+ <rdfs:Class rdf:about="http://purl.org/rss/1.0/modules/content/item"
+   rdfs:label="Item"
+   rdfs:comment="Describes a single version of the content for its parent item. If the content is available on the Web at a specific address, content:item has an rdf:about attribute containg the URI of the content.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/modules/content/" /> 
+ </rdfs:Class>
+
+  <!--  Property declarations   --> 
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/modules/content/items"
+   rdfs:label="Items"
+   rdfs:comment="A sub-element of an RSS item or channel. Points to a list of content:item elements.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/modules/content/" /> 
+ </rdf:Property>
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/modules/content/format"
+    rdfs:label="Format"
+    rdfs:comment="The format of an item. Suggested best practice is to use the list of RDDL natures.">
+   <rdfs:domain rdf:resource="item"/> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/modules/content/" /> 
+ </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/rss/1.0/modules/content/encoding"
+    rdfs:label="Encoding"
+    rdfs:comment="A on literal resource that indicates the encoding of the content:item. An encoding is a reversable method of including content within the RSS file.">
+   <rdfs:domain rdf:resource="item"/> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/modules/content/" /> 
+ </rdf:Property>
+ 
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/modules/content/encoded"
+    rdfs:label="Encoded"
+    rdfs:comment="DRAFT: Not yet approved by WG. An element whose contents are the entity-encoded or CDATA-escaped version of the content of the item.">
+   <rdfs:domain rdf:resource="http://purl.org/rss/1.0/item"/> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/modules/content/" /> 
+ </rdf:Property>
+</rdf:RDF>

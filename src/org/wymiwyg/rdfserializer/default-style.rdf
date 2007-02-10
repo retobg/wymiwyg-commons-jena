@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rss="http://purl.org/rss/1.0/" xmlns:serializer="http://wymiwyg.org/ontologies/rdfserializer#" xml:base="http://wymiwyg.org/rdfserializer/default-style">
+	<serializer:Style rdf:ID="default" serializer:anonymousDeepness="6" serializer:nonAnonymousDeepness="1">
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="knobot" serializer:url="http://wymiwyg.org/ontologies/knobot#"/>
+		</serializer:nameSpacePrefix>
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="aggregator" serializer:url="http://wymiwyg.org/ontologies/aggregator#"/>
+		</serializer:nameSpacePrefix>
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="dc" serializer:url="http://purl.org/dc/elements/1.1/"/>
+		</serializer:nameSpacePrefix>
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="rss" serializer:url="http://purl.org/rss/1.0/"/>
+		</serializer:nameSpacePrefix>
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="rdfs" serializer:url="http://www.w3.org/2000/01/rdf-schema#"/>
+		</serializer:nameSpacePrefix>
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="rss_content" serializer:url="http://purl.org/rss/1.0/modules/content/"/>
+		</serializer:nameSpacePrefix>
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="rss_image" serializer:url="http://wymiwyg.org/ontologies/rss/image#"/>
+		</serializer:nameSpacePrefix>
+		
+		
+		<serializer:nameSpacePrefix>
+			<serializer:NSPrefix serializer:prefix="rss_link" serializer:url="http://wymiwyg.org/ontologies/rss/link#"/>
+		</serializer:nameSpacePrefix>
+		<serializer:typeDescriptors>
+			<rdf:Seq>
+				<rdf:li>
+					<serializer:TypeDescriptor>
+						<serializer:type rdf:resource="http://purl.org/rss/1.0/channel"/>
+					</serializer:TypeDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:TypeDescriptor>
+						<serializer:type rdf:resource="http://purl.org/rss/1.0/item"/>
+					</serializer:TypeDescriptor>
+				</rdf:li>
+			</rdf:Seq>
+		</serializer:typeDescriptors>
+		<serializer:propertyDescriptors>
+			<rdf:Seq>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://purl.org/rss/1.0/title"/>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://purl.org/rss/1.0/link"/>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"/>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://purl.org/rss/1.0/description"/>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://purl.org/rss/1.0/description"/>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://wymiwyg.org/ontologies/rss/link#links"/>
+						<serializer:style>
+							<serializer:Style serializer:anonymousDeepness="6" serializer:nonAnonymousDeepness="1">
+								<serializer:typeDescriptors>
+									<rdf:Seq>
+										<rdf:li>
+											<serializer:BlockTypeDescriptor>
+												<!-- this is needed if RDFS-entailment is not activated -->
+												<rdf:type rdf:resource="http://wymiwyg.org/ontologies/rdfserializer#TypeDescriptor"/>
+												<serializer:type rdf:resource="http://purl.org/rss/1.0/channel"/>
+											</serializer:BlockTypeDescriptor>
+										</rdf:li>
+									</rdf:Seq>
+								</serializer:typeDescriptors>
+							</serializer:Style>
+						</serializer:style>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://wymiwyg.org/ontologies/knobot#recommender"/>
+						<serializer:style>
+							<serializer:Style serializer:anonymousDeepness="6" serializer:nonAnonymousDeepness="1">
+								<serializer:typeDescriptors>
+									<rdf:Seq>
+										<rdf:li>
+											<serializer:BlockTypeDescriptor>
+												<!-- this is needed if RDFS-entailment is not activated -->
+												<rdf:type rdf:resource="http://wymiwyg.org/ontologies/rdfserializer#TypeDescriptor"/>
+												<serializer:type rdf:resource="http://purl.org/rss/1.0/channel"/>
+											</serializer:BlockTypeDescriptor>
+										</rdf:li>
+									</rdf:Seq>
+								</serializer:typeDescriptors>
+							</serializer:Style>
+						</serializer:style>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://wymiwyg.org/ontologies/knobot#target"/>
+						<serializer:style>
+							<serializer:Style serializer:anonymousDeepness="6" serializer:nonAnonymousDeepness="1">
+								<serializer:typeDescriptors>
+									<rdf:Seq>
+										<rdf:li>
+											<serializer:BlockTypeDescriptor>
+												<!-- this is needed if RDFS-entailment is not activated -->
+												<rdf:type rdf:resource="http://wymiwyg.org/ontologies/rdfserializer#TypeDescriptor"/>
+												<serializer:type rdf:resource="http://purl.org/rss/1.0/channel"/>
+											</serializer:BlockTypeDescriptor>
+										</rdf:li>
+									</rdf:Seq>
+								</serializer:typeDescriptors>
+							</serializer:Style>
+						</serializer:style>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				<rdf:li>
+					<serializer:PropertyDescriptor>
+						<serializer:property rdf:resource="http://wymiwyg.org/ontologies/aggregator#aggregated"/>
+						<serializer:style>
+							<serializer:Style serializer:anonymousDeepness="6" serializer:nonAnonymousDeepness="1">
+								<serializer:typeDescriptors>
+									<rdf:Seq>
+										<rdf:li>
+											<serializer:BlockTypeDescriptor>
+												<!-- this is needed if RDFS-entailment is not activated -->
+												<rdf:type rdf:resource="http://wymiwyg.org/ontologies/rdfserializer#TypeDescriptor"/>
+												<serializer:type rdf:resource="http://purl.org/rss/1.0/channel"/>
+											</serializer:BlockTypeDescriptor>
+										</rdf:li>
+									</rdf:Seq>
+								</serializer:typeDescriptors>
+							</serializer:Style>
+						</serializer:style>
+					</serializer:PropertyDescriptor>
+				</rdf:li>
+				
+			</rdf:Seq>
+		</serializer:propertyDescriptors>
+	</serializer:Style>
+
+
+</rdf:RDF>

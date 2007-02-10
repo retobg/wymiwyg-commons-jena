@@ -1,0 +1,1734 @@
+<rdf:RDF
+    xmlns:j.0="http://wymiwyg.org/ontologies/mediatypes#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-killustrator</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>kil</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-troff</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>t</j.0:canonicalFileExtension>
+    <j.0:fileExtension>tr</j.0:fileExtension>
+    <j.0:fileExtension>roff</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-pascal</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>p</j.0:canonicalFileExtension>
+    <j.0:fileExtension>pas</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.symbian.install</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sis</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-c++src</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>c++</j.0:canonicalFileExtension>
+    <j.0:fileExtension>cpp</j.0:fileExtension>
+    <j.0:fileExtension>cxx</j.0:fileExtension>
+    <j.0:fileExtension>cc</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/rdf+n3</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>n3</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-koan</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>skp</j.0:canonicalFileExtension>
+    <j.0:fileExtension>skd</j.0:fileExtension>
+    <j.0:fileExtension>skt</j.0:fileExtension>
+    <j.0:fileExtension>skm</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-portable-anymap</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pnm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.presentation</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-c++hdr</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>h++</j.0:canonicalFileExtension>
+    <j.0:fileExtension>hpp</j.0:fileExtension>
+    <j.0:fileExtension>hxx</j.0:fileExtension>
+    <j.0:fileExtension>hh</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/octet-stream</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>bin</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.wap.wbxml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wbxml</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/rss+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rss</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-wav</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wav</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.presentation-template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>otp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/gl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-ms-bmp</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>bmp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-wingz</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wz</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-kinemage</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>kin</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-javascript</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>js</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.image</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odi</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/dv</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dif</j.0:canonicalFileExtension>
+    <j.0:fileExtension>dv</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/quicktime</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>qt</j.0:canonicalFileExtension>
+    <j.0:fileExtension>mov</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-moc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>moc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-portable-pixmap</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ppm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-troff-me</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>me</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-ncbi-asn1-ascii</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>prt</j.0:canonicalFileExtension>
+    <j.0:fileExtension>ent</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-macromodel-input</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mmd</j.0:canonicalFileExtension>
+    <j.0:fileExtension>mmod</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/cu-seeme</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cu</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-bibtex</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>bib</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-troff-man</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>man</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-msvideo</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>avi</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-python</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>py</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-portable-graymap</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pgm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.wap.wmlc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmlc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-lha</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>lha</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-iphone</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>iii</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-sd2</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sd2</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/fli</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>fli</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.visio</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vsd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-ustar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ustar</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mopac-input</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mop</j.0:canonicalFileExtension>
+    <j.0:fileExtension>mopcrt</j.0:fileExtension>
+    <j.0:fileExtension>mpc</j.0:fileExtension>
+    <j.0:fileExtension>dat</j.0:fileExtension>
+    <j.0:fileExtension>zmt</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/rdf+nt</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>nt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.spreadsheet</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ods</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-wais-source</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>src</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-portable-bitmap</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pbm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-bcpio</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>bcpio</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-java-jnlp-file</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jnlp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.text-master</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.writer.template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>stw</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-turtle</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>turtle</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.text</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-gaussian-checkpoint</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>fch</j.0:canonicalFileExtension>
+    <j.0:fileExtension>fchk</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-pcs-gcd</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gcd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-latex</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>latex</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.stardivision.math</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>smf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-iso9660-image</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>iso</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-gaussian-cube</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cub</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/vnd.wap.wmlscript</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmls</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-vcard</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vcf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-sv4cpio</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sv4cpio</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/pdf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pdf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-raw</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>nef</j.0:canonicalFileExtension>
+    <j.0:fileExtension>NEF</j.0:fileExtension>
+    <j.0:fileExtension>raw</j.0:fileExtension>
+    <j.0:fileExtension>RAW</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/mp4</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mp4</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-ms-wma</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wma</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.text-template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ott</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-rgb</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rgb</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/dl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-perl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pl</j.0:canonicalFileExtension>
+    <j.0:fileExtension>pm</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-abiword</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>abw</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/css</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>css</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-molconn-Z</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>b</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-gsm</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gsm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-tex-pk</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pk</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/dsptype</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tsp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-aiff</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>aif</j.0:canonicalFileExtension>
+    <j.0:fileExtension>aiff</j.0:fileExtension>
+    <j.0:fileExtension>aifc</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-texinfo</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>texinfo</j.0:canonicalFileExtension>
+    <j.0:fileExtension>texi</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-crossfire</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>bsd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-ms-wvx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wvx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-stuffit</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sit</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.ms-pki.stl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>stl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-httpd-php4</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>php4</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-python-code</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pyc</j.0:canonicalFileExtension>
+    <j.0:fileExtension>pyo</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-sgi-movie</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>movie</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.impress</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sxi</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mopac-graph</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gpt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-ctx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ctx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/mpeg</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mpeg</j.0:canonicalFileExtension>
+    <j.0:fileExtension>mpg</j.0:fileExtension>
+    <j.0:fileExtension>mpe</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-mpegurl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>m3u</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/pgp-keys</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>key</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-xyz</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xyz</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-kword</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>kwd</j.0:canonicalFileExtension>
+    <j.0:fileExtension>kwt</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/vnd.wap.wbmp</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wbmp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>x-world/x-vrml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vrm</j.0:canonicalFileExtension>
+    <j.0:fileExtension>vrml</j.0:fileExtension>
+    <j.0:fileExtension>wrl</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.calc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sxc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-httpd-php3-preprocessed</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>php3p</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mol2</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mol2</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-quicktimeplayer</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>qtl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mdl-tgf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tgf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/atom+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>atom</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mdl-sdfile</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sd</j.0:canonicalFileExtension>
+    <j.0:fileExtension>sdf</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/pgp-signature</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pgp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.writer.global</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sxg</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-ms-wmv</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmv</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-chdr</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>h</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/trix</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>trix</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mdl-rdfile</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/vnd.wap.wml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wml</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mdl-molfile</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mol</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-photoshop</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>psd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-ncbi-asn1-spec</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>asn</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-genbank</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gen</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-chem3d</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>c3d</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-tcl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tcl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-ms-wmx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-csml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>csml</j.0:canonicalFileExtension>
+    <j.0:fileExtension>csm</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-literate-haskell</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>lhs</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-kspread</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ksp</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mdl-rxnfile</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rxn</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-ms-wm</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-compass</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cpa</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/scriptlet</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sct</j.0:canonicalFileExtension>
+    <j.0:fileExtension>wsc</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-ncbi-asn1-binary</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>val</j.0:canonicalFileExtension>
+    <j.0:fileExtension>aso</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-ms-asf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>asf</j.0:canonicalFileExtension>
+    <j.0:fileExtension>asx</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cache</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cac</j.0:canonicalFileExtension>
+    <j.0:fileExtension>cache</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/smil</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>smi</j.0:canonicalFileExtension>
+    <j.0:fileExtension>smil</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-kpresenter</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>kpr</j.0:canonicalFileExtension>
+    <j.0:fileExtension>kpt</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-alchemy</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>alc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-trash</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>~</j.0:canonicalFileExtension>
+    <j.0:fileExtension>%</j.0:fileExtension>
+    <j.0:fileExtension>bak</j.0:fileExtension>
+    <j.0:fileExtension>old</j.0:fileExtension>
+    <j.0:fileExtension>sik</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-kchart</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>chrt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-java</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>java</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-tex-gf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-swissprot</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sw</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xml</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-shockwave-flash</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>swf</j.0:canonicalFileExtension>
+    <j.0:fileExtension>swfl</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/vnd.sun.j2me.app-descriptor</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jad</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/png</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>png</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-msi</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>msi</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/svg+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>svg</j.0:canonicalFileExtension>
+    <j.0:fileExtension>svgz</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-ms-wmd</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/rtf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rtf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.database</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odb</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.chart</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-tcl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tcl</j.0:canonicalFileExtension>
+    <j.0:fileExtension>tk</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/tiff</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tiff</j.0:canonicalFileExtension>
+    <j.0:fileExtension>tif</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>model/mesh</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>msh</j.0:canonicalFileExtension>
+    <j.0:fileExtension>mesh</j.0:fileExtension>
+    <j.0:fileExtension>silo</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cerius</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cer</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.calc.template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>stc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>model/vrml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wrl</j.0:canonicalFileExtension>
+    <j.0:fileExtension>vrml</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-isostar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>istr</j.0:canonicalFileExtension>
+    <j.0:fileExtension>ist</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-vamas-iso14976</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vms</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cdx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cdx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/mac-binhex40</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>hqx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-tar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tar</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.formula</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/wordperfect</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wpd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/java-serialized-object</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ser</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-object</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>o</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-redhat-package-manager</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rpm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-gnumeric</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gnumeric</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-rosdal</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ros</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-doom</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wad</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A162">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-cmu-raster</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ras</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A163">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.graphics-template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>otg</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A164">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-pdb</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pdb</j.0:canonicalFileExtension>
+    <j.0:fileExtension>ent</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A165">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/andrew-inset</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ez</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A166">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-jcamp-dx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jdx</j.0:canonicalFileExtension>
+    <j.0:fileExtension>dx</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A167">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.draw</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sxd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A168">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-csh</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>csh</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A169">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.graphics</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>odg</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A170">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-pkcs7-crl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>crl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A171">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-shar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>shar</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A172">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-cdlink</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vcd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A173">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.ms-excel</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xls</j.0:canonicalFileExtension>
+    <j.0:fileExtension>xlb</j.0:fileExtension>
+    <j.0:fileExtension>xlt</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A174">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-msdos-program</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>com</j.0:canonicalFileExtension>
+    <j.0:fileExtension>exe</j.0:fileExtension>
+    <j.0:fileExtension>bat</j.0:fileExtension>
+    <j.0:fileExtension>dll</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A175">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-xwindowdump</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xwd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A176">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/xslt+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xsl</j.0:canonicalFileExtension>
+    <j.0:fileExtension>xslt</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A177">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/xml-dtd</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dtd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A178">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-hin</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>hin</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A179">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.stardivision.impress</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sdd</j.0:canonicalFileExtension>
+    <j.0:fileExtension>sdp</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A180">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.impress.template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sti</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A181">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-chemdraw</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>chm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A182">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/java-vm</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>class</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A183">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-x509-ca-cert</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>crt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A184">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-haskell</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>hs</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A185">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/mathml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mml</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A186">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/wordperfect5.1</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wp5</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A187">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-gcg8-sequence</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gcg</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A188">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-csh</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>csh</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A189">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/texmacs</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tm</j.0:canonicalFileExtension>
+    <j.0:fileExtension>ts</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A190">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-sh</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sh</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A191">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.draw.template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>std</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A192">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-maker</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>frm</j.0:canonicalFileExtension>
+    <j.0:fileExtension>maker</j.0:fileExtension>
+    <j.0:fileExtension>frame</j.0:fileExtension>
+    <j.0:fileExtension>fm</j.0:fileExtension>
+    <j.0:fileExtension>fb</j.0:fileExtension>
+    <j.0:fileExtension>book</j.0:fileExtension>
+    <j.0:fileExtension>fbdoc</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A193">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.stardivision.draw</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sda</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A194">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-go-sgf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sgf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A195">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-sv4crc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sv4crc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A196">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/pcx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pcx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A197">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-mif</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mif</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A198">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.ms-pki.seccat</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cat</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A199">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-dsrc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>d</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A200">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.smaf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mmf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A201">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-httpd-php3</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>php3</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A202">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/futuresplash</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>spl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A203">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>model/iges</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>igs</j.0:canonicalFileExtension>
+    <j.0:fileExtension>iges</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A204">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-lzh</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>lzh</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A205">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cache-csf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>csf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A206">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mmcif</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mcif</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A207">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.stardivision.calc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sdc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A208">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/mathematica</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>nb</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A209">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-xbitmap</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xbm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A210">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cactvs-binary</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cbin</j.0:canonicalFileExtension>
+    <j.0:fileExtension>cascii</j.0:fileExtension>
+    <j.0:fileExtension>ctab</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A211">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-ms-wmz</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmz</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A212">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cml</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A213">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-xcf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xcf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A214">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-123</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wk</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A215">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cmdf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cmdf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A216">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-ica</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ica</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A217">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/mac-compactpro</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cpt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A218">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/xhtml+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xhtml</j.0:canonicalFileExtension>
+    <j.0:fileExtension>xht</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A219">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-gaussian-log</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gal</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A220">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-xpixmap</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xpm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A221">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>x-conference/x-cooltalk</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ice</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A222">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/vnd.djvu</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>djvu</j.0:canonicalFileExtension>
+    <j.0:fileExtension>djv</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A223">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/tab-separated-values</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tsv</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A224">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-csrc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>c</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A225">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/ogg</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ogg</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A226">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-debian-package</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>deb</j.0:canonicalFileExtension>
+    <j.0:fileExtension>udeb</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A227">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-jng</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jng</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A228">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-flac</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>flac</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A229">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-setext</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>etx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A230">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-internet-signup</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ins</j.0:canonicalFileExtension>
+    <j.0:fileExtension>isp</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A231">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mopac-out</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>moo</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A232">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/zip</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>zip</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A233">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/postscript</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ps</j.0:canonicalFileExtension>
+    <j.0:fileExtension>ai</j.0:fileExtension>
+    <j.0:fileExtension>eps</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A234">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-coreldrawtemplate</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cdt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A235">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/hta</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>hta</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A236">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-lzx</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>lzx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A237">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-graphing-calculator</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gcf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A238">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-corelphotopaint</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cpt</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A239">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-oz-application</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>oza</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A240">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.stardivision.writer</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sdw</j.0:canonicalFileExtension>
+    <j.0:fileExtension>vor</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A241">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/rdf+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rdf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A242">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/java-archive</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jar</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A243">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-freemind</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A244">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-pkcs7-certreqresp</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>p7r</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A245">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-mng</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mng</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A246">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-scpls</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pls</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A247">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.text-web</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>oth</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A248">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.math</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sxm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A249">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-gaussian-input</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gau</j.0:canonicalFileExtension>
+    <j.0:fileExtension>gjc</j.0:fileExtension>
+    <j.0:fileExtension>gjf</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A250">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-vcalendar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vcs</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A251">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cif</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cif</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A252">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-ms-wax</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wax</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A253">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/msaccess</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mdb</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A254">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-mopac-vib</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mvb</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A255">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-apple-diskimage</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dmg</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A256">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/calendar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ics</j.0:canonicalFileExtension>
+    <j.0:fileExtension>icz</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A257">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rng</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A258">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/ief</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ief</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A259">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-jg</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>art</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A260">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-xfig</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>fig</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A261">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.wap.wmlscriptc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>wmlsc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A262">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/rar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rar</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A263">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.oasis.opendocument.spreadsheet-template</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ots</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A264">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/jpeg</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jpeg</j.0:canonicalFileExtension>
+    <j.0:fileExtension>jpg</j.0:fileExtension>
+    <j.0:fileExtension>jpe</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A265">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.sun.xml.writer</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sxw</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A266">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-ncbi-asn1</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>asn</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A267">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-jmol</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>jmz</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A268">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.stardivision.writer-global</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sgl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A269">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-nwc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>nwc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A270">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-xpinstall</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xpi</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A271">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-cxf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cxf</j.0:canonicalFileExtension>
+    <j.0:fileExtension>cef</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A272">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/comma-separated-values</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>csv</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A273">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/mpeg</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mpga</j.0:canonicalFileExtension>
+    <j.0:fileExtension>mpega</j.0:fileExtension>
+    <j.0:fileExtension>mp2</j.0:fileExtension>
+    <j.0:fileExtension>mp3</j.0:fileExtension>
+    <j.0:fileExtension>m4a</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A274">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/html</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>html</j.0:canonicalFileExtension>
+    <j.0:fileExtension>htm</j.0:fileExtension>
+    <j.0:fileExtension>shtml</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A275">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-coreldrawpattern</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pat</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A276">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-gtar</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gtar</j.0:canonicalFileExtension>
+    <j.0:fileExtension>tgz</j.0:fileExtension>
+    <j.0:fileExtension>taz</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A277">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.rim.cod</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cod</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A278">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-troff-ms</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ms</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A279">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-bittorrent</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>torrent</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A280">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/msword</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>doc</j.0:canonicalFileExtension>
+    <j.0:fileExtension>dot</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A281">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-xtel</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xtel</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A282">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-gamess-input</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>inp</j.0:canonicalFileExtension>
+    <j.0:fileExtension>gam</j.0:fileExtension>
+    <j.0:fileExtension>gamin</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A283">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-tex</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>tex</j.0:canonicalFileExtension>
+    <j.0:fileExtension>ltx</j.0:fileExtension>
+    <j.0:fileExtension>sty</j.0:fileExtension>
+    <j.0:fileExtension>cls</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A284">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-galactic-spc</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>spc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A285">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/prs.sid</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sid</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A286">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-cdf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cdf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A287">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-cpio</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cpio</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A288">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-vmd</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>vmd</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A289">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-dvi</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dvi</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A290">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-coreldraw</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cdr</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A291">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/x-sh</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>sh</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A292">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-embl-dl-nucleotide</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>emb</j.0:canonicalFileExtension>
+    <j.0:fileExtension>embl</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A293">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.ms-powerpoint</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ppt</j.0:canonicalFileExtension>
+    <j.0:fileExtension>pps</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A294">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/pics-rules</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>prf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A295">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/plain</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>txt</j.0:canonicalFileExtension>
+    <j.0:fileExtension>asc</j.0:fileExtension>
+    <j.0:fileExtension>text</j.0:fileExtension>
+    <j.0:fileExtension>diff</j.0:fileExtension>
+    <j.0:fileExtension>pot</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A296">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/oda</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>oda</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A297">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.cinderella</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>cdy</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A298">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-futuresplash</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>spl</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A299">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/gif</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>gif</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A300">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/richtext</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>rtx</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A301">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-hdf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>hdf</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A302">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-director</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dcr</j.0:canonicalFileExtension>
+    <j.0:fileExtension>dir</j.0:fileExtension>
+    <j.0:fileExtension>dxr</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A303">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-chess-pgn</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pgn</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A304">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-dms</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>dms</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A305">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-pn-realaudio</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ra</j.0:canonicalFileExtension>
+    <j.0:fileExtension>rm</j.0:fileExtension>
+    <j.0:fileExtension>ram</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A306">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/mpegurl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>m3u</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A307">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>chemical/x-macmolecule</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mcm</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A308">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/iuls</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>uls</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A309">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/vnd.mpegurl</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mxu</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A310">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/basic</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>au</j.0:canonicalFileExtension>
+    <j.0:fileExtension>snd</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A311">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-font</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pfa</j.0:canonicalFileExtension>
+    <j.0:fileExtension>pfb</j.0:fileExtension>
+    <j.0:fileExtension>gsf</j.0:fileExtension>
+    <j.0:fileExtension>pcf</j.0:fileExtension>
+    <j.0:fileExtension>pcf.Z</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A312">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-netcdf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>nc</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A313">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/x-realaudio</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ra</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A314">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>video/x-la-asf</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>lsf</j.0:canonicalFileExtension>
+    <j.0:fileExtension>lsx</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A315">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-httpd-php-source</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>phps</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A316">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>text/h323</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>323</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A317">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>audio/midi</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>mid</j.0:canonicalFileExtension>
+    <j.0:fileExtension>midi</j.0:fileExtension>
+    <j.0:fileExtension>kar</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A318">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/vnd.mozilla.xul+xml</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>xul</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A319">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-ns-proxy-autoconfig</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>pac</j.0:canonicalFileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A320">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>application/x-httpd-php</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>phtml</j.0:canonicalFileExtension>
+    <j.0:fileExtension>pht</j.0:fileExtension>
+    <j.0:fileExtension>php</j.0:fileExtension>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A321">
+    <rdf:type rdf:resource="http://wymiwyg.org/ontologies/mediatypes#Type"/>
+    <j.0:canonicalMimeType>image/x-icon</j.0:canonicalMimeType>
+    <j.0:canonicalFileExtension>ico</j.0:canonicalFileExtension>
+  </rdf:Description>
+</rdf:RDF>

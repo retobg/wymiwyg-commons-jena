@@ -1,0 +1,37 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rss="http://purl.org/rss/1.0/" xmlns:img="http://wymiwyg.org/ontologies/rss/image#" xml:base="http://wymiwyg.org/ontologies/rss/image">
+
+ <!--  Class declarations   -->
+
+	<rdfs:Class rdf:ID="Image" rdfs:label="Item" rdfs:comment="A description of an image in a specific context (url, size, link etc.). This may be an element in rss:items or the value of pict:image"></rdfs:Class>
+
+  <!--  Property declarations   -->
+
+	<rdf:Property rdf:ID="image" rdfs:label="Image" rdfs:comment="An image to be imcluded in an rss:item or rss:channel.">
+		<rdfs:range rdf:resource="#Image"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="source" rdfs:label="Source" rdfs:comment="The source of the image.">
+		<rdfs:domain rdf:resource="#Image"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="height" rdfs:label="Height" rdfs:comment="The height of an image.">
+		<rdfs:domain rdf:resource="#Image"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="width" rdfs:label="Width" rdfs:comment="The width of an image.">
+		<rdfs:domain rdf:resource="#Image"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="link" rdfs:label="Link" rdfs:comment="The link on a image-item.">
+		<rdfs:domain rdf:resource="#Image"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="alt" rdfs:label="Alt" rdfs:comment="A text to be shown when the image cannot be displayed">
+		<rdfs:domain rdf:resource="#Image"/>
+	</rdf:Property>
+
+	<rdf:Property rdf:ID="caption" rdfs:label="Caption" rdfs:comment="A short text explaining the image">
+		<rdfs:domain rdf:resource="#Image"/>
+	</rdf:Property>
+
+</rdf:RDF>

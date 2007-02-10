@@ -1,0 +1,19 @@
+
+<rdf:RDF
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:rss="http://purl.org/rss/1.0/"
+		xmlns:space="http://frot.org/space/0.1/"
+		xml:base="http://frot.org/space/0.1/">
+
+	
+
+	<rdf:Property rdf:about="location"
+			rdfs:label="location">
+		<rdfs:range rdf:resource="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#SpatialThing"/>
+		<rdfs:isDefinedBy rdf:resource="http://frot.org/space/0.1/" />
+	</rdf:Property>
+	
+	
+</rdf:RDF>

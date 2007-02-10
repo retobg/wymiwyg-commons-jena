@@ -1,0 +1,333 @@
+<project name="wymiwyg-commons-vocabularies" default="all" basedir="../../../../../">
+
+
+	<!-- This ant script generates the vocabulary java file in this packages from their
+	 respective schema definition. It uses the java app jena.schemagen.
+-->
+
+
+	<!-- Construct the classpath -->
+	<path id="project.class.path">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="lib-endorsed">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	
+	<target name="space">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/space.rdf" />
+				<arg value="-o" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/SPACE.java" />
+				<arg value="-n" />
+				<arg value="SPACE" />
+				<arg value="-a" />
+				<arg value="http://frot.org/space/0.1/" />
+				<arg value="--package" />
+				<arg value="org.wymiwyg.commons.vocabulary" />
+				<arg value="--rdfs" />
+			</java>
+		</target>
+	
+	<target name="foaf-ex">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/foaf-extensions.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/FOAFEX.java" />
+			<arg value="-n" />
+			<arg value="FOAFEX" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/foaf/extensions#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+	<target name="mod_content">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/mod_content.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/CONTENT.java" />
+			<arg value="-n" />
+			<arg value="CONTENT" />
+			<arg value="-a" />
+			<arg value="http://purl.org/rss/1.0/modules/content/" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+
+	<target name="mod_attach">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/mod_attach.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/ATTACH.java" />
+			<arg value="-n" />
+			<arg value="ATTACH" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/rss/attach#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+	<target name="mod_img">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/mod_img.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/IMG.java" />
+			<arg value="-n" />
+			<arg value="IMG" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/rss/image#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+	<target name="mod_link">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/mod_link.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/LINK.java" />
+			<arg value="-n" />
+			<arg value="LINK" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/rss/link#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+	<target name="mod_comment">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/mod_comment.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/COMMENT.java" />
+			<arg value="-n" />
+			<arg value="COMMENT" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/rss/comment#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+	<target name="document">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/document.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/DOCUMENT.java" />
+			<arg value="-n" />
+			<arg value="DOCUMENT" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/document#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+	
+	<target name="webdav">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/webdav.rdf" />
+				<arg value="-o" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/WEBDAV.java" />
+				<arg value="-n" />
+				<arg value="WEBDAV" />
+				<arg value="-a" />
+				<arg value="http://wymiwyg.org/ontologies/webdav#" />
+				<arg value="--package" />
+				<arg value="org.wymiwyg.commons.vocabulary" />
+				<arg value="--rdfs" />
+			</java>
+		</target>
+	
+	<target name="mediatypes">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/mediatypes.rdf" />
+				<arg value="-o" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/MEDIATYPES.java" />
+				<arg value="-n" />
+				<arg value="MEDIATYPES" />
+				<arg value="-a" />
+				<arg value="http://wymiwyg.org/ontologies/mediatypes#" />
+				<arg value="--package" />
+				<arg value="org.wymiwyg.commons.vocabulary" />
+				<arg value="--rdfs" />
+			</java>
+		</target>
+	
+	<target name="atom">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/atom.rdf" />
+				<arg value="-o" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/ATOM.java" />
+				<arg value="-n" />
+				<arg value="ATOM" />
+				<arg value="-a" />
+				<arg value="https://bloged.dev.java.net/Ontologies/Atom/2005-01-03/" />
+				<arg value="--package" />
+				<arg value="org.wymiwyg.commons.vocabulary" />
+				<arg value="--rdfs" />
+			</java>
+		</target>
+
+
+	<target name="postaddress">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/postaddress.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/POSTADDRESS.java" />
+			<arg value="-n" />
+			<arg value="POSTADDRESS" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/foaf/postaddress" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+	<target name="role">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/role.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/ROLE.java" />
+			<arg value="-n" />
+			<arg value="ROLE" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/foaf/role" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+
+	<target name="foaf">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg value="http://xmlns.com/foaf/0.1/index.rdf" />
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/FOAF.java" />
+			<arg value="-n" />
+			<arg value="FOAF" />
+			<arg value="-a" />
+			<arg value="http://xmlns.com/foaf/0.1/" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+		</java>
+	</target>
+
+	
+	<target name="calendar">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg value="src/org/wymiwyg/commons/vocabulary/ical.rdf"/>
+				<!-- <arg value="http://www.w3.org/2002/12/cal/ical.rdf" /> -->
+				<arg value="-o" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/CALENDAR.java" />
+				<arg value="-n" />
+				<arg value="CALENDAR" />
+				<arg value="-a" />
+				<arg value="http://www.w3.org/2002/12/cal#" />
+				<arg value="--package" />
+				<arg value="org.wymiwyg.commons.vocabulary" />
+				<arg value="--ontology" />
+			</java>
+		</target>
+	
+	<target name="discobits">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg value="http://discobits.org/ontology.en.de.fr.it.rdf"/>
+				<arg value="-o" />
+				<arg file="src/org/wymiwyg/commons/vocabulary/DISCOBITS.java" />
+				<arg value="-n" />
+				<arg value="DISCOBITS" />
+				<arg value="-a" />
+				<arg value="http://discobits.org/ontology#" />
+				<arg value="--package" />
+				<arg value="org.wymiwyg.commons.vocabulary" />
+				<arg value="--ontology" />
+			</java>
+		</target>
+	
+	<target name="geof">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg value="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl"/>
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/GEOF.java" />
+			<arg value="-n" />
+			<arg value="GEOF" />
+			<arg value="-a" />
+			<arg value="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--ontology" />
+		</java>
+	</target>
+	
+	<target name="geof-ex">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg value="src/org/wymiwyg/commons/vocabulary/geof-extensions.rdf"/>
+			<!-- <arg value="http://www.w3.org/2002/12/cal/ical.rdf" /> -->
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/GEOFEX.java" />
+			<arg value="-n" />
+			<arg value="GEOFEX" />
+			<arg value="-a" />
+			<arg value="http://wymiwyg.org/ontologies/geof/extensions#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--ontology" />
+			<arg value="--rdfs" />
+		</java>
+	</target>
+	
+	<target name="infoatom">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg value="http://atomowl.org/ontologies/infoatom.de.fr.en.rdf"/>
+			<!-- <arg value="http://www.w3.org/2002/12/cal/ical.rdf" /> -->
+			<arg value="-o" />
+			<arg file="src/org/wymiwyg/commons/vocabulary/INFOATOM.java" />
+			<arg value="-n" />
+			<arg value="INFOATOM" />
+			<arg value="-a" />
+			<arg value="http://atomowl.org/ontologies/infoatom#" />
+			<arg value="--package" />
+			<arg value="org.wymiwyg.commons.vocabulary" />
+			<arg value="--ontology" />
+			<!-- <arg value="rdfs" /> -->
+		</java>
+	</target>
+	
+	
+	<target name="all" depends="foaf-ex, mod_content, mod_img, mod_link, mod_comment, document, mod_attach, foaf, role, postaddress, atom, calendar, geof, geof-ex, space, webdav, discobits" />
+
+</project>

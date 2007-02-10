@@ -1,0 +1,372 @@
+<!--
+A vocabulary to add postal addresses to foaf-profiles.
+
+This vocabulary was designed looking at the S42-3 standard draft of the universal postal union ([WWW]http://www.upu.int/).
+The main deviation from the standard are:
+
+- Individual and Organisational Identification are replaced with reference to foaf:Agent
+
+- Postal operator specific attributes are expressed through instances of #?ServiceDeliveryPointSpecification to
+allow the address information for multiple postal operators to be expressed as one resource of type #Address, i.e. a 
+foaf:Agent with one physical office has only one #address property even its office has different postcodes and different 
+P.O.-Box Number with different postal operators.
+
+- LocalDespatchingInformation has been introduced to group fields common to "Mail Recipient Despatching Information" 
+and "Delivery Point Access Data"
+
+- Subtypes (e.g. given name parts, sector type levels) have been omitted for simplicity.
+
+This vocabulary does not contains information on how the address should be rendered on a letter or envelop, to do this it 
+should be possible to use the "Postad Address Template Description Language (PATDL)" from UPU.
+
+Even if the mentionated UPU standards are royalty free, their final versions are not available for free, thus I looked at 
+the working draft located at [WWW]http://www.upu.int/document/2004/an/cep_gan-3/d010.pdf.
+
+Open Issues:
+
+- Range of country, literal with the country-code, with the localized name, or make class country with properties name and 
+code (iso or a free replacement for iso).
+
+- namespace 
+
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns="http://wymiwyg.org/ontologies/foaf/postaddress#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xml:base="http://wymiwyg.org/ontologies/foaf/postaddress">
+	
+ <rdfs:Class rdf:ID="Address">
+ 	<rdfs:label xml:lang="en">Address</rdfs:label>
+ 	<rdfs:comment xml:lang="en">An address to wich traditional postal letters can be sent. Common 
+ 	properties are: addresse (a foaf:Agent), mailee (a foaf:Agent), recipientDespatchingInformation and deliveryPoint</rdfs:comment>
+ </rdfs:Class>
+ 
+ <rdf:Property rdf:ID="address">
+ 	<rdfs:label xml:lang="en">address</rdfs:label>
+ 	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+	<rdfs:range rdf:resource="#Address"/>
+	<owl:inverseOf rdf:resource="#addressee"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="addressee">
+ 	<rdfs:label xml:lang="en">addressee</rdfs:label>
+ 	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+	<rdfs:domain rdf:resource="#Address"/>
+	<owl:inverseOf rdf:resource="#address"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="mailee">
+ 	<rdfs:label xml:lang="en">mailee</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Specified only if not same of addresse, this is commonly rendered
+ 	after the adresse prefixed with with "c/o" or "P.A."</rdfs:comment>
+ 	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+	<rdfs:domain rdf:resource="#Address"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="recipientDespatchingInformation">
+ 	<rdfs:label xml:lang="en">recipientDespatchingInformation</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Links an address to information intended for routing and despatch of mail by the mail 
+ 	recipient when this is not the addresse.</rdfs:comment>
+ 	<rdfs:range rdf:resource="#LocalDespatchingInformation"/>
+	<rdfs:domain rdf:resource="#Address"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="deliveryPoint">
+ 	<rdfs:label xml:lang="en">deliveryPoint</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Links an address to the specification of the point where the postal service provider delivers the mail.
+ 	</rdfs:comment>
+ 	<rdfs:range rdf:resource="#DeliveryPoint"/>
+	<rdfs:domain rdf:resource="#Address"/>
+ </rdf:Property>
+ 
+ <rdfs:Class rdf:ID="LocalDespatchingInformation">
+ 	<rdfs:label xml:lang="en">LocalDespatchingInformation</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Information intended for routing and despatch withing the site or building
+ 	of the recipient, this may be intended for the mail recipient as value of recipientDespatchingInformation
+ 	property of an address as well as for the postal operator if a value of localDespatchInformation of 
+ 	a Location.</rdfs:comment>
+ </rdfs:Class>
+ 
+ <rdf:Property rdf:ID="wing">
+ 	<rdfs:label xml:lang="en">wing</rdfs:label>
+ 	<rdfs:comment xml:lang="en"></rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#LocalDespatchingInformation"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="floor">
+ 	<rdfs:label xml:lang="en">floor</rdfs:label>
+ 	<rdfs:comment xml:lang="en"></rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#LocalDespatchingInformation"/>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="door">
+ 	<rdfs:label xml:lang="en">door</rdfs:label>
+ 	<rdfs:comment xml:lang="en"></rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#LocalDespatchingInformation"/>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="stairwel">
+ 	<rdfs:label xml:lang="en">stairwell</rdfs:label>
+ 	<rdfs:comment xml:lang="en"></rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#LocalDespatchingInformation"/>
+ </rdf:Property>
+ 
+  <rdf:Property rdf:ID="supplementaryDespatchData">
+ 	<rdfs:label xml:lang="en">supplementaryDespatchData</rdfs:label>
+ 	<rdfs:comment xml:lang="en">This can both be recipient specif additional handling information
+ 	(e.g. "summer contest 2005") as well as suplementary delivery point data for the postal operator
+ 	(e.g. "Opposite number 23")</rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#LocalDespatchingInformation"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="extensionDesignation">
+ 	<rdfs:label xml:lang="en">extensionDesignation</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Supplementary information where the delivery point is not uniquely 
+ 	identified by other properties, e.g. letter-box number within a building.</rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#LocalDespatchingInformation"/>
+ </rdf:Property>
+ 
+ <rdfs:Class rdf:ID="DeliveryPoint">
+ 	<rdfs:label xml:lang="en">DeliveryPoint</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Specification of the point where the postal service provider delivers the mail.
+ 	Typically has a property location with operator idependent information and one or several 
+ 	serviceDeliveryPointSpecification-properties with information specific to a postal operator (like postbox and
+ 	postcode witch may not be reachable or useful for another operator).</rdfs:comment>
+ </rdfs:Class>
+ 
+ <rdf:Property rdf:ID="location">
+ 	<rdfs:label xml:lang="en">location</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Directions to reach a geographical point.</rdfs:comment>
+ 	<rdfs:range rdf:resource="#Location"/>
+ 	<rdfs:domain rdf:resource="#DeliveryPoint"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="serviceDeliveryPointSpecification">
+ 	<rdfs:label xml:lang="en">serviceDeliveryPointSpecification</rdfs:label>
+ 	<rdfs:comment xml:lang="en">A mail delivery point speicfication specific to a postal operator</rdfs:comment>
+ 	<rdfs:range rdf:resource="#ServiceDeliveryPointSpecification"/>
+ 	<rdfs:domain rdf:resource="#DeliveryPoint"/>
+ </rdf:Property>
+ 
+
+ <rdfs:Class rdf:ID="Location">
+ 	<rdfs:label xml:lang="en">Location</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Directions to reach a geographical point.</rdfs:comment>
+ </rdfs:Class>
+ 
+ <rdf:Property rdf:ID="thoroughfareName">
+ 	<rdfs:label xml:lang="en">thoroughfare name</rdfs:label>
+ 	<rdfs:label xml:lang="de">Verkehrsweg</rdfs:label>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:comment xml:lang="en">This has higher sorting relevance than thoroughfare type and qualifier</rdfs:comment>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="thoroughfareType">
+ 	<rdfs:label xml:lang="en">thoroughfare type</rdfs:label>
+ 	<rdfs:label xml:lang="de">Weg-Typ</rdfs:label>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:comment xml:lang="en">E.g.: "Street", "Avenue", "Calle"</rdfs:comment>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="thoroughfareQualifier">
+ 	<rdfs:label xml:lang="en">thoroughfare qualifier</rdfs:label>
+ 	<rdfs:label xml:lang="de">Weg-Zusatzbezeichnung</rdfs:label>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:comment xml:lang="en">E.g.: "upper", "new"</rdfs:comment>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="secondaryThoroughfareName">
+ 	<rdfs:label xml:lang="en">secondary thoroughfare name</rdfs:label>
+ 	<rdfs:label xml:lang="de">Sekundärer Verkehrsweg</rdfs:label>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:comment xml:lang="en">The secondary thoroughfare is a thoroughfare which 
+ 	accessed via (the primary) thoroughfare</rdfs:comment>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="secondaryThoroughfareType">
+ 	<rdfs:label xml:lang="en">secondary thoroughfare type</rdfs:label>
+ 	<rdfs:label xml:lang="de">Sekundärer Weg-Typ</rdfs:label>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:comment xml:lang="en">E.g.: "Street", "Avenue", "Calle"</rdfs:comment>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="streetNr">
+ 	<rdfs:label xml:lang="en">street-Nr.</rdfs:label>
+ 	<rdfs:label xml:lang="de">Hausnummer</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Street number or plot, may be composite e.g. 6-8</rdfs:comment>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="localDespatchingInformation">
+ 	<rdfs:label xml:lang="en">local despatching information</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Links to information on the dispacth within the site or proximity of
+ 	the recipient.</rdfs:comment>
+ 	<rdfs:range rdf:resource="#LocalDespatchingInformation"/>
+	<rdfs:domain rdf:resource="#Location"/>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="building">
+ 	<rdfs:label xml:lang="en">building</rdfs:label>
+ 	<rdfs:label xml:lang="de">Gebäube</rdfs:label>
+ 	<rdfs:comment xml:lang="en">The name or number of the building/construction</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+
+ <rdf:Property rdf:ID="buildingType">
+ 	<rdfs:label xml:lang="en">buildingType</rdfs:label>
+ 	<rdfs:label xml:lang="de">Gebäube-Typ</rdfs:label>
+ 	<rdfs:comment xml:lang="en">The type of the building/construction 
+ 	(e.g. "Block", "Houseboat", "Mobile Home")</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="sectorType">
+ 	<rdfs:label xml:lang="en">sectort type</rdfs:label>
+ 	<rdfs:label xml:lang="de">Sektor Type</rdfs:label>
+ 	<rdfs:comment xml:lang="en">The type of the sector in which a building is located (e.g. conjunto)</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="sectorIndicator">
+ 	<rdfs:label xml:lang="en">sectort indicator</rdfs:label>
+ 	<rdfs:label xml:lang="de">Sektor Bezeichnung</rdfs:label>
+ 	<rdfs:comment xml:lang="en">The name or number designating the specific instance of sector type</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="town">
+ 	<rdfs:label xml:lang="en">town</rdfs:label>
+ 	<rdfs:label xml:lang="de">Stadt</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Village, town or city</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="proximateTown">
+ 	<rdfs:label xml:lang="en">proximateTown</rdfs:label>
+ 	<rdfs:comment xml:lang="en">City of major town which is close to town</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="region">
+ 	<rdfs:label xml:lang="en">region</rdfs:label>
+ 	<rdfs:label xml:lang="de">Region</rdfs:label>
+ 	<rdfs:comment xml:lang="en">The region within a country</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="district">
+ 	<rdfs:label xml:lang="en">district</rdfs:label>
+ 	<rdfs:label xml:lang="de">Bezirk</rdfs:label>
+ 	<rdfs:comment xml:lang="en"></rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="country">
+ 	<rdfs:label xml:lang="en">country</rdfs:label>
+ 	<rdfs:label xml:lang="de">Land</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Country, dependency or area of geopolitical interest, in which a delivery point is 
+ 	located or via which the delivery point is accessed.</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Location"/>
+ 	<rdfs:country rdf:resource="#Country"/>
+ 	<rdfs:subClassOf 
+			rdf:resource="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#SpatialThing"/>
+ </rdf:Property>
+ 
+  <rdfs:Class rdf:ID="Country">
+ 	<rdfs:label xml:lang="en">Country</rdfs:label>
+ 	<rdfs:comment xml:lang="en">A Country, dependency or area of geopolitical interest, in which a delivery point is 
+ 	located or via which the delivery point is accessed.</rdfs:comment>
+ 	<rdfs:subClasOf rdf:resource="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#Country" />
+  </rdfs:Class>
+ 
+  <rdf:Property rdf:ID="countryCode">
+  	<rdfs:label xml:lang="en">countryCode</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Associates a two-letter country-code to the subject.</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Country"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ 	<!-- same as http://psi.oasis-open.org/iso/3166/#code-a, remove? -->
+  </rdf:Property>
+  
+  <rdf:Property rdf:ID="countryName">
+  	<rdfs:label xml:lang="en">countryName</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Associates a country-name to the subject.</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Country"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  	<!-- geof uses rdfs:label, isn't this good enough ? -->
+  </rdf:Property>
+ 
+  <rdfs:Class rdf:ID="ServiceDeliveryPointSpecification">
+ 	<rdfs:label xml:lang="en">ServiceDeliveryPointSpecification</rdfs:label>
+ 	<rdfs:comment xml:lang="en">A mail delivery point speicfication specific to a postal operator.
+ 	Typical properties are authority, postcode, deliveryServiceIndicator, deliveryServiceType and deliveryServiceQualifier</rdfs:comment>
+ </rdfs:Class>
+ 
+ <rdf:Property rdf:ID="authority">
+ 	<rdfs:label xml:lang="en">defining authority</rdfs:label>
+ 	<rdfs:label xml:lang="de">definierende Autorität</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Postal operator responsible for definining the element of 
+ 	#ServiceDeliveryPointSpecification (lile postcode)</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#ServiceDeliveryPointSpecification"/>
+ </rdf:Property> 
+
+  <rdf:Property rdf:ID="postcode">
+ 	<rdfs:label xml:lang="en">Post Code</rdfs:label>
+ 	<rdfs:label xml:lang="de">postleitzahl</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Postal address element designating the code used for sorting the mail.
+ 	May be operator specific (like "DX codes" in the U.K.), see #authority</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#ServiceDeliveryPointSpecification"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="deliveryServiceType">
+ 	<rdfs:label xml:lang="en">Delivery service type</rdfs:label>
+ 	<rdfs:comment xml:lang="en">e.g. "Poste Restante", "Postbox", the specific delivery point within the
+ 	specified category (like the postbox number) is identified by #deliveryServiceIndicator</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#ServiceDeliveryPointSpecification"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="deliveryServiceIndicator">
+ 	<rdfs:label xml:lang="en">Delivery service indicator</rdfs:label>
+ 	<rdfs:comment xml:lang="en">Name or number indicating the instance of the postal service delivery point
+ 	of the type indicated by #deliveryServiceType (e.g. the postbox number)</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#ServiceDeliveryPointSpecification"/>
+ 	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="phone">
+ 	<rdfs:label xml:lang="en">phone</rdfs:label>
+ 	<rdfs:label xml:lang="de">Telefon</rdfs:label>
+	<rdfs:comment xml:lang="en">A phone number of a phone located at this address.</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Address"/>
+ </rdf:Property>
+ 
+ <rdf:Property rdf:ID="fax">
+ 	<rdfs:label xml:lang="en">fax</rdfs:label>
+ 	<rdfs:label xml:lang="de">Telefax</rdfs:label>
+	<rdfs:comment xml:lang="en">A fax number of a fax-machine located at this address.</rdfs:comment>
+ 	<rdfs:domain rdf:resource="#Address"/>
+ </rdf:Property>
+
+</rdf:RDF>

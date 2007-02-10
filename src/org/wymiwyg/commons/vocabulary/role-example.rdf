@@ -1,0 +1,25 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:role="http://wymiwyg.org/ontologies/foaf/role#"
+xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+	<foaf:Person>
+		<foaf:name>Jo Activist</foaf:name>
+		<role:participates>
+			<role:Participation>
+				<role:group>
+					<foaf:Group>
+						<foaf:name>Friends of Foaf</foaf:name>
+					</foaf:Group>
+				</role:group>
+				<role:role>
+					<role:Role>
+						<role:denotation>Hacker</role:denotation>
+						<role:abbreviation>hk</role:abbreviation>
+					</role:Role>
+				</role:role>
+			</role:Participation>
+		</role:participates>
+	</foaf:Person>
+</rdf:RDF>

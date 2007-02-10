@@ -1,0 +1,19 @@
+<rdf:RDF 
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rss="http://purl.org/rss/1.0/"
+     xmlns:l="http://wymiwyg.org/ontologies/rss/comment#"
+     xml:base="http://wymiwyg.org/ontologies/rss/comment">
+
+<!--  Property declarations   --> 
+
+ <rdf:Property rdf:ID="comments"
+   rdfs:label="comments">
+   <rdfs:comment xml:lang="en">A sequence of comments to this Item. The sequence contains 
+   only Elements oft type rss:Item</rdfs:comment>
+   <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+   <rdfs:domain rdf:resource="http://purl.org/rss/1.0/Item"/>
+   <rdfs:isDefinedBy rdf:resource="http://wymiwyg.org/ontologies/rss/comment#" /> 
+ </rdf:Property>
+</rdf:RDF>

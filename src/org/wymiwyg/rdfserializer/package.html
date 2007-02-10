@@ -1,0 +1,61 @@
+The classes in this package and its subpackages serialize an RDF Resource to RDF/XML allowing control of the serialization by other resouces in the model.
+
+
+<serialization:Style rdf:ID="RSS1.0" serialization:anonymousDeepness="6" serialization:nonAnonymousDeepness="3">
+	<serialization:nameSpacePrefix>
+		<serialization:NSPrefix serialization:prefix="knobot" serialization:url="http://wymiwyg.org/ontologies/knobot"/>
+	</serialization:nameSpacePrefix>
+	<serialization:typeDescriptors>
+		<rdf:Seq>
+			<rdf:li rdf:resource="http://purl.org/rss/1.0/channel"/>	
+			<rdf:li rdf:resource="http://purl.org/rss/1.0/item"/>
+		</rdf:Seq>
+	</serialization:typeDescriptors>
+	<serialization:propertyDescriptors>
+		<rdf:Seq>
+			<rdf:li rdf:resource="http://purl.org/rss/1.0/title"/>
+		</rdf:Seq>
+	</serialization:propertyDescriptors>
+
+<serialization:Style rdf:ID="RSS1.0" serialization:anonymousDeepness="6" serialization:nonAnonymousDeepness="3">
+	<serialization:nameSpacePrefix>
+		<serialization:NSPrefix serialization:prefix="knobot" serialization:url="http://wymiwyg.org/ontologies/knobot"/>
+	</serialization:nameSpacePrefix>
+	<serialization:typeDescriptors>
+		<rdf:Seq>
+			<rdf:li>
+				<serializer:TypeDescriptor>
+					<serializer:match rdf:resource="http://purl.org/rss/1.0/channel"/>		
+				</serializer:TypeDescriptor>
+			</rdf:li>
+			<rdf:li>
+				<serializer:TypeDescriptor>
+					<serializer:match rdf:resource="http://purl.org/rss/1.0/item"/>		
+				</serializer:TypeDescriptor>
+			</rdf:li>
+			<rdf:li>
+				<serializer:TypeDescriptor>
+					<serializer:match rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+					<rdf:type rdf:resource="foo/NodeID"/>
+					<!-- alternatives
+					<rdf:type rdf:resource="foo/ForceNodeID"/>
+					 this created a non-anoymous resource by assigning an ID:
+					<rdf:type rdf:resource="foo/AssignID"/>
+					<rdf:type rdf:resource="foo/ForceAssignID"/>
+					-->
+				</serializer:TypeDescriptor>
+			</rdf:li>
+		</rdf:Seq>
+	</serialization:typeDescriptors>
+	<serialization:propertyDescriptors>
+		<rdf:Seq>
+			<rdf:li>
+				<serializer:PropertyDescriptor>
+					<serializer:match rdf:resource="http://purl.org/rss/1.0/title"/>
+					<!-- this indicates that the attribute should be serialized as xml child
+					element rather than xml-attribute -->
+					<rdf:type rdf:resource="foo/Element"/>
+				</serializer:PropertyDescriptor>
+
+		
+	

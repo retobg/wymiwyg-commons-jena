@@ -1,0 +1,63 @@
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  xmlns:rss="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:img="http://wymiwyg.org/ontologies/rss/image#" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+	
+	<rss:channel rdf:about="http://localhost:8585/rdf">
+		<rss:title xml:lang="en">Example Channel</rss:title>
+		<rss:title xml:lang="de">Beispiel Kanal</rss:title>
+		<rss:link>http://localhost:8585/rdf</rss:link>
+		<rss:description xml:lang="en">My example channel</rss:description>
+		<img:image>
+			<img:Image>
+				<img:source rdf:resource="http://localhost:8585/images/refugee"/>
+				<img:link rdf:resource="http://www.sfh-osar.ch/"/>
+			</img:Image>
+		</img:image>
+		<rss:items>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://localhost:8585/rdf/2002/09/01"/>
+				<rdf:li rdf:resource="http://localhost:8585/rdf/2002/09/02"/>
+			</rdf:Seq>
+		</rss:items>
+	</rss:channel>
+	<rss:item rdf:about="http://localhost:8585/rdf/2002/09/01">
+		<rss:title xml:lang="en">News for September the First</rss:title>
+		<rss:link>http://localhost:8585/rdf/2002/09/01</rss:link>
+		<rss:description xml:lang="en">other things happened today</rss:description>
+		<dc:date>2002-09-01</dc:date>
+		<content:items>
+			<rdf:Bag>
+				<rdf:li>
+					<content:item>
+
+						<content:format rdf:resource="http://www.w3.org/1999/xhtml"/>
+						<content:encoding rdf:resource="http://www.w3.org/TR/REC-xml#dt-wellformed"/>
+						<rdf:value rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+An amazing story here.
+                    </rdf:value>
+					</content:item>
+				</rdf:li>
+			</rdf:Bag>
+		</content:items>
+	</rss:item>
+	<rss:item rdf:about="http://localhost:8585/rdf/2002/09/02">
+		<rss:title xml:lang="en">News for September the Second</rss:title>
+		<rss:link>http://localhost:8585/rdf/2002/09/01</rss:link>
+		<rss:description xml:lang="en">yet other things happened today</rss:description>
+		<dc:date>2002-09-02</dc:date>
+		<content:items>
+			<rdf:Bag>
+				<rdf:li>
+					<content:item>
+
+						<content:format rdf:resource="http://www.w3.org/1999/xhtml"/>
+						<content:encoding rdf:resource="http://www.w3.org/TR/REC-xml#dt-wellformed"/>
+						<rdf:value rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+Another crazy story here.
+                    </rdf:value>
+					</content:item>
+				</rdf:li>
+			</rdf:Bag>
+		</content:items>
+	</rss:item>
+</rdf:RDF>

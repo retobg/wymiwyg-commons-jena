@@ -1,0 +1,57 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:addr="http://wymiwyg.org/ontologies/foaf/postaddress#"
+xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+	<foaf:Person>
+		<foaf:name>Jo Activist</foaf:name>
+		<addr:address rdf:parseType="Resource">
+			<addr:mailee>
+				<foaf:Organization>
+					<foaf:name>Penitenziario Criminale dello Stato</foaf:name>
+				</foaf:Organization>
+			</addr:mailee>
+			<addr:recipientDespatchingInformation rdf:parseType="Resource">
+				<addr:wing>sinistra</addr:wing>
+				<addr:supplementaryDespatchData>Cella 385</addr:supplementaryDespatchData>
+			</addr:recipientDespatchingInformation>
+			<addr:deliveryPoint rdf:parseType="Resource">			
+				<addr:location rdf:parseType="Resource">
+					<addr:thoroughfareName>Liberta</addr:thoroughfareName>
+					<addr:thoroughfareType>Via</addr:thoroughfareType>
+					<addr:thoroughfareQualifier>inferiore</addr:thoroughfareQualifier>
+					<addr:streetNr>7</addr:streetNr>
+					<addr:localDespatchingInformation rdf:parseType="Resource">
+						<addr:supplementaryDespatchData>Post accepted on thursday from 7:00 till 7:15 A.M. at checkpoint 3</addr:supplementaryDespatchData>
+					</addr:localDespatchingInformation>
+					<addr:buildingType>bunker</addr:buildingType>
+					<addr:building>speranza</addr:building>
+					<addr:town>Cellerino</addr:town>
+					<addr:proximateTown>Lugano</addr:proximateTown>
+					<addr:region>TI</addr:region>
+					<addr:country>CH</addr:country>
+				</addr:location>
+				<addr:serviceDeliveryPointSpecification rdf:parseType="Resource">
+					<addr:authority>
+						<foaf:Agent>
+							<foaf:name>Swiss Post - Postmail</foaf:name>
+						</foaf:Agent>
+					</addr:authority>
+					<addr:deliveryServiceType>Postbox</addr:deliveryServiceType>
+					<addr:deliveryServiceIndicator>678</addr:deliveryServiceIndicator>
+					<addr:postcode>5600</addr:postcode>
+				</addr:serviceDeliveryPointSpecification>
+				<addr:serviceDeliveryPointSpecification rdf:parseType="Resource">
+					<addr:authority>
+						<foaf:Agent>
+							<foaf:name>DML</foaf:name>
+						</foaf:Agent>
+					</addr:authority>
+					<addr:postcode>XP 56</addr:postcode>
+				</addr:serviceDeliveryPointSpecification>
+			</addr:deliveryPoint>
+		</addr:address>
+	</foaf:Person>
+
+</rdf:RDF>
