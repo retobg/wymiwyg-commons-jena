@@ -47,6 +47,11 @@ import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.vocabulary.DC;
+import com.hp.hpl.jena.vocabulary.RDF;
+import com.hp.hpl.jena.vocabulary.RDFS;
+import com.hp.hpl.jena.vocabulary.RSS;
+import com.hp.hpl.jena.vocabulary.VCARD;
 
 /**
  * This is a serializer for the R3X format. R3X is a subset of RDF/XML defined
@@ -64,7 +69,31 @@ public class Serializer {
 
 	private int prefixCounter = 0;
 
-	private Map nonModelPrefixMap = new HashMap();
+	private Map<String, String> nonModelPrefixMap = new HashMap<String, String>();
+	{
+		nonModelPrefixMap.put(RDF.getURI(), "rdf");
+		nonModelPrefixMap.put(RDFS.getURI(), "rdfs");
+		nonModelPrefixMap.put(DC.getURI(), "dc");
+		nonModelPrefixMap.put(RSS.getURI(), "rss");
+		nonModelPrefixMap.put("http://www.daml.org/2001/03/daml+oil.daml#",
+				"daml");
+		nonModelPrefixMap.put(VCARD.getURI(), "vcard");
+		nonModelPrefixMap.put("http://www.w3.org/2002/07/owl#", "owl");
+		nonModelPrefixMap.put("http://jena.hpl.hp.com/gvs/aggregator#", "aggr");
+		nonModelPrefixMap.put("http://discobits.org/ontology#", "disco");
+		nonModelPrefixMap.put("http://gvs.hpl.hp.com/ontologies/authorization#", "gvsauth");
+		nonModelPrefixMap.put("http://gvs.hpl.hp.com/ontologies/account-manager#", "gvsacc");
+		nonModelPrefixMap.put("http://gvs.hpl.hp.com/ontologies/services#", "gvsser");
+		nonModelPrefixMap.put("http://gvs.hpl.hp.com/ontologies/http-listener#", "gvshttp");
+		nonModelPrefixMap.put("http://xmlns.com/foaf/0.1/", "foaf");
+		nonModelPrefixMap.put("http://wymiwyg.org/ontologies/foaf/extensions#", "foafex");
+		nonModelPrefixMap.put("http://wymiwyg.org/ontologies/foaf/postaddress#", "addr");
+		nonModelPrefixMap.put("http://wymiwyg.org/ontologies/foaf/role#", "role");
+		nonModelPrefixMap.put("http://wymiwyg.org/ontologies/knobot#", "knobot");
+		nonModelPrefixMap.put("http://wymiwyg.org/ontologies/rss/attach#", "attach");
+		nonModelPrefixMap.put("http://www.w3.org/2002/12/cal#", "calendar");
+		nonModelPrefixMap.put("http://frot.org/space/0.1/", "space");
+	}
 
 	public void serialize(Model model, String base, Writer rawOut)
 			throws IOException {
@@ -188,12 +217,12 @@ public class Serializer {
 		StmtIterator stmtIter = subject.listProperties(predicate);
 		if (locales == null) {
 			while (stmtIter.hasNext()) {
-				writeProperty(out, model, model.createStatement(
-						subject, predicate, stmtIter.nextStatement().getObject()),
+				writeProperty(out, model, model.createStatement(subject,
+						predicate, stmtIter.nextStatement().getObject()),
 						baseURI);
 			}
 		} else {
-			
+
 			Set noLanguageVersionStatementSet = new HashSet();
 			Map availableVersions = new HashMap();
 			while (stmtIter.hasNext()) {
@@ -216,15 +245,15 @@ public class Serializer {
 						.hasNext();) {
 					Statement current = (Statement) iter.next();
 					writeProperty(out, model, current, baseURI);
-	
+
 				}
 				for (Iterator iter = availableVersions.values().iterator(); iter
 						.hasNext();) {
 					Statement current = (Statement) iter.next();
 					writeProperty(out, model, current, baseURI);
-	
+
 				}
-	
+
 			} else {
 				boolean localizedVersionWritten = false;
 				for (int i = 0; i < locales.length; i++) {
@@ -234,7 +263,8 @@ public class Serializer {
 					if (localizedStmt == null) {
 						// assume that who understands xx_YY also understands xx
 						locale = new Locale(locale.getLanguage());
-						localizedStmt = (Statement) availableVersions.get(locale);
+						localizedStmt = (Statement) availableVersions
+								.get(locale);
 					}
 					if (localizedStmt != null) {
 						availableVersions.remove(locale);
@@ -251,8 +281,8 @@ public class Serializer {
 				}
 				if ((!localizedVersionWritten) || forceShow) {
 					boolean languageIndependentVersionWritten = false;
-					for (Iterator iter = noLanguageVersionStatementSet.iterator(); iter
-							.hasNext();) {
+					for (Iterator iter = noLanguageVersionStatementSet
+							.iterator(); iter.hasNext();) {
 						Statement current = (Statement) iter.next();
 						writeProperty(out, model, current, baseURI);
 						languageIndependentVersionWritten = true;
@@ -266,16 +296,16 @@ public class Serializer {
 									.next();
 							availableLiterals[i] = currentAvailableVersion
 									.getLiteral();
-	
+
 						}
 						try {
 							Literal[] replacement = localisationHandler
 									.getReplacement(availableLiterals);
 							for (int i = 0; i < replacement.length; i++) {
-	
-								writeProperty(out, model, model.createStatement(
-										subject, predicate, replacement[i]),
-										baseURI);
+
+								writeProperty(out, model, model
+										.createStatement(subject, predicate,
+												replacement[i]), baseURI);
 							}
 						} catch (LanguageUnavailableException ex) {
 							if (!localizedVersionWritten
@@ -388,9 +418,10 @@ public class Serializer {
 		out.print(cName);
 		String dataTypeURI = literal.getDatatypeURI();
 		if (dataTypeURI != null) {
-			if (dataTypeURI.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral")) {
+			if (dataTypeURI
+					.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral")) {
 				out.print(" rdf:parseType=\"Literal\"");
-				//literal.isWellFormedXML() will return true
+				// literal.isWellFormedXML() will return true
 			} else {
 				out.print(" rdf:datatype=\"");
 				out.print(dataTypeURI);
