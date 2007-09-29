@@ -499,11 +499,11 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.String, com.hp.hpl.jena.datatypes.RDFDatatype)
 	 */
-	public Resource addProperty(Property arg0, String arg1, RDFDatatype arg2) {
+/*	public Resource addProperty(Property arg0, String arg1, RDFDatatype arg2) {
 		synchronized (model) {
 			return wrapped.addProperty(arg0, arg1, arg2);
 		}
-	}
+	}*/
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Resource#hasURI(java.lang.String)
