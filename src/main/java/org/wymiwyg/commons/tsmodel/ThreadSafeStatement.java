@@ -459,8 +459,8 @@ public class ThreadSafeStatement implements Statement {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.rdf.model.Statement#hasWellFormedXML()
 	 */
-	public boolean hasWellFormedXML() {
+	/*public boolean hasWellFormedXML() {
 		return wrapped.hasWellFormedXML();
-	}
+	}*/
 
 }
