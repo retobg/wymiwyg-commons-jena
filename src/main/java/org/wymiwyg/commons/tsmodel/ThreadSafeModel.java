@@ -78,7 +78,6 @@ import com.hp.hpl.jena.rdf.model.Bag;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelChangedListener;
-import com.hp.hpl.jena.rdf.model.ModelLock;
 import com.hp.hpl.jena.rdf.model.NodeIterator;
 import com.hp.hpl.jena.rdf.model.NsIterator;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -148,54 +147,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public synchronized Model add(Resource s, Property p, boolean o) {
-		wrapped.add(s, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public synchronized Model add(Resource s, Property p, char o) {
-		wrapped.add(s, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public synchronized Model add(Resource s, Property p, double o) {
-		wrapped.add(s, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public synchronized Model add(Resource s, Property p, float o) {
-		wrapped.add(s, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public synchronized Model add(Resource s, Property p, long o) {
-		wrapped.add(s, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, java.lang.Object)
-	 */
-	public synchronized Model add(Resource s, Property p, Object o) {
-		wrapped.add(s, p, o);
-		return this;
-	}
-
+	
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.ModelCon#add(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
 	 */
@@ -300,47 +252,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return wrapped.contains(s, p);
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public synchronized boolean contains(Resource s, Property p, boolean o) {
-		return wrapped.contains(s, p, o);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public synchronized boolean contains(Resource s, Property p, char o) {
-		return wrapped.contains(s, p, o);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public synchronized boolean contains(Resource s, Property p, double o) {
-		return wrapped.contains(s, p, o);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public synchronized boolean contains(Resource s, Property p, float o) {
-		return wrapped.contains(s, p, o);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public synchronized boolean contains(Resource s, Property p, long o) {
-		return wrapped.contains(s, p, o);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, java.lang.Object)
-	 */
-	public synchronized boolean contains(Resource s, Property p, Object o) {
-		return wrapped.contains(s, p, o);
-	}
+	
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Model#contains(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
@@ -458,48 +370,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return wrapped.createList(members);
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(boolean)
-	 */
-	public Literal createLiteral(boolean v) {
-		return wrapped.createLiteral(v);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(char)
-	 */
-	public Literal createLiteral(char v) {
-		return wrapped.createLiteral(v);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(double)
-	 */
-	public Literal createLiteral(double v) {
-		return wrapped.createLiteral(v);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(float)
-	 */
-	public Literal createLiteral(float v) {
-		return wrapped.createLiteral(v);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(long)
-	 */
-	public Literal createLiteral(long v) {
-		return wrapped.createLiteral(v);
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(java.lang.Object)
-	 */
-	public Literal createLiteral(Object v) {
-		return wrapped.createLiteral(v);
-	}
-
+	
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createLiteral(java.lang.String)
 	 */
@@ -521,16 +392,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return wrapped.createLiteral(v, language);
 	}
 
-	/**
-	 * @deprecated
-	 * @see com.hp.hpl.jena.rdf.model.Model#createLiteral(java.lang.String, java.lang.String, boolean)
-	 */
-	public Literal createLiteral(
-		String v,
-		String language,
-		boolean wellFormed) {
-		return wrapped.createLiteral(v, language, wellFormed);
-	}
+
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createProperty(java.lang.String)
@@ -633,65 +495,6 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return new ThreadSafeSeq(this, wrapped.createSeq(uri));
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public Statement createStatement(
-		Resource s,
-		Property p,
-		boolean o) {
-		return new ThreadSafeStatement(this, wrapped.createStatement(s, p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public Statement createStatement(
-		Resource s,
-		Property p,
-		char o) {
-		return new ThreadSafeStatement(this, wrapped.createStatement(s, p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public Statement createStatement(
-		Resource s,
-		Property p,
-		double o) {
-		return new ThreadSafeStatement(this, wrapped.createStatement(s, p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public Statement createStatement(
-		Resource s,
-		Property p,
-		float o) {
-		return new ThreadSafeStatement(this, wrapped.createStatement(s, p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public  Statement createStatement(
-		Resource s,
-		Property p,
-		long o) {
-		return new ThreadSafeStatement(this, wrapped.createStatement(s, p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, java.lang.Object)
-	 */
-	public  Statement createStatement(
-		Resource s,
-		Property p,
-		Object o) {
-		return new ThreadSafeStatement(this, wrapped.createStatement(s, p, o));
-	}
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Model#createStatement(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
@@ -925,13 +728,6 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return wrapped.getGraph();
 	}
 
-	/**
-	 * @deprecated
-	 * @see com.hp.hpl.jena.rdf.model.Model#getModelLock()
-	 */
-	public ModelLock getModelLock() {
-		return wrapped.getModelLock();
-	}
 
 	/**
 	 * @see com.hp.hpl.jena.shared.PrefixMapping#getNsPrefixMap()
@@ -1153,66 +949,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return new CachingStmtIterator(this, wrapped.listStatements());
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listStatements(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public synchronized StmtIterator listStatements(
-		Resource subject,
-		Property predicate,
-		boolean object) {
-		return new CachingStmtIterator(
-			this,
-			wrapped.listStatements(subject, predicate, object));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listStatements(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public synchronized StmtIterator listStatements(
-		Resource subject,
-		Property predicate,
-		char object) {
-		return new CachingStmtIterator(
-			this,
-			wrapped.listStatements(subject, predicate, object));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listStatements(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public synchronized StmtIterator listStatements(
-		Resource subject,
-		Property predicate,
-		double object) {
-		return new CachingStmtIterator(
-			this,
-			wrapped.listStatements(subject, predicate, object));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listStatements(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public synchronized StmtIterator listStatements(
-		Resource subject,
-		Property predicate,
-		float object) {
-		return new CachingStmtIterator(
-			this,
-			wrapped.listStatements(subject, predicate, object));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listStatements(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public synchronized StmtIterator listStatements(
-		Resource subject,
-		Property predicate,
-		long object) {
-		return new CachingStmtIterator(
-			this,
-			wrapped.listStatements(subject, predicate, object));
-	}
-
+	
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Model#listStatements(com.hp.hpl.jena.rdf.model.Resource, com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
 	 */
@@ -1271,72 +1008,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 			wrapped.listSubjectsWithProperty(p));
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public synchronized ResIterator listSubjectsWithProperty(
-		Property p,
-		boolean o) {
-		return new CachingResIterator(
-			this,
-			wrapped.listSubjectsWithProperty(p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public synchronized ResIterator listSubjectsWithProperty(
-		Property p,
-		char o) {
-		return new CachingResIterator(
-			this,
-			wrapped.listSubjectsWithProperty(p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public synchronized ResIterator listSubjectsWithProperty(
-		Property p,
-		double o) {
-		return new CachingResIterator(
-			this,
-			wrapped.listSubjectsWithProperty(p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public synchronized ResIterator listSubjectsWithProperty(
-		Property p,
-		float o) {
-		return new CachingResIterator(
-			this,
-			wrapped.listSubjectsWithProperty(p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public synchronized ResIterator listSubjectsWithProperty(
-		Property p,
-		long o) {
-		return new CachingResIterator(
-			this,
-			wrapped.listSubjectsWithProperty(p, o));
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.ModelCon#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.Object)
-	 */
-	public synchronized ResIterator listSubjectsWithProperty(
-		Property p,
-		Object o) {
-		return new CachingResIterator(
-			this,
-			wrapped.listSubjectsWithProperty(p, o));
-	}
-
+	
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Model#listSubjectsWithProperty(com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
 	 */
@@ -1602,14 +1274,7 @@ public class ThreadSafeModel extends ModelCom implements Model {
 		return wrapped.unregister(listener);
 	}
 
-	/**
-	 * @deprecated
-	 * @see com.hp.hpl.jena.shared.PrefixMapping#usePrefix(java.lang.String)
-	 */
-	public synchronized String usePrefix(String uri) {
-		// TODO Auto-generated method stub
-		return wrapped.usePrefix(uri);
-	}
+
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Model#write(java.io.OutputStream)

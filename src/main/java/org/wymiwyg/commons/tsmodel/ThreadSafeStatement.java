@@ -392,12 +392,7 @@ public class ThreadSafeStatement implements Statement {
 		return new ThreadSafeResource(model, wrapped.getSubject());
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Statement#getWellFormed()
-	 */
-	public boolean getWellFormed() {
-		return wrapped.getWellFormed();
-	}
+
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Statement#isReified()
@@ -454,6 +449,48 @@ public class ThreadSafeStatement implements Statement {
 	 */
 	public String toString() {
 		return wrapped.toString();
+	}
+
+	public Statement changeLiteralObject(boolean arg0) {
+		synchronized (model) {
+			return wrapped.changeLiteralObject(arg0);
+		}
+	}
+
+	public Statement changeLiteralObject(long arg0) {
+		synchronized (model) {
+			return wrapped.changeLiteralObject(arg0);
+		}
+	}
+
+	public Statement changeLiteralObject(int arg0) {
+		synchronized (model) {
+			return wrapped.changeLiteralObject(arg0);
+		}
+	}
+
+	public Statement changeLiteralObject(char arg0) {
+		synchronized (model) {
+			return wrapped.changeLiteralObject(arg0);
+		}
+	}
+
+	public Statement changeLiteralObject(float arg0) {
+		synchronized (model) {
+			return wrapped.changeLiteralObject(arg0);
+		}
+	}
+
+	public Statement changeLiteralObject(double arg0) {
+		synchronized (model) {
+			return wrapped.changeLiteralObject(arg0);
+		}
+	}
+
+	public boolean hasWellFormedXML() {
+		synchronized (model) {
+			return wrapped.hasWellFormedXML();
+		}
 	}
 
 	/* (non-Javadoc)

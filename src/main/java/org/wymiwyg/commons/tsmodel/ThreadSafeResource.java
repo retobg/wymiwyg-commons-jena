@@ -107,53 +107,6 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public Resource addProperty(Property p, boolean o) {
-		model.add(this, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public Resource addProperty(Property p, char o) {
-		model.add(this, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public Resource addProperty(Property p, double o) {
-		model.add(this, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public Resource addProperty(Property p, float o) {
-		model.add(this, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public Resource addProperty(Property p, long o) {
-		model.add(this, p, o);
-		return this;
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.Object)
-	 */
-	public Resource addProperty(Property p, Object o) {
-		model.add(this, p, o);
-		return this;
-	}
 
 	/**
 	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
@@ -315,61 +268,6 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, boolean)
-	 */
-	public boolean hasProperty(Property p, boolean o) {
-		synchronized (model) {
-			return wrapped.hasProperty(p, o);
-		}
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, char)
-	 */
-	public boolean hasProperty(Property p, char o) {
-		synchronized (model) {
-			return wrapped.hasProperty(p, o);
-		}
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, double)
-	 */
-	public boolean hasProperty(Property p, double o) {
-		synchronized (model) {
-			return wrapped.hasProperty(p, o);
-		}
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, float)
-	 */
-	public boolean hasProperty(Property p, float o) {
-		synchronized (model) {
-			return wrapped.hasProperty(p, o);
-		}
-
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, long)
-	 */
-	public boolean hasProperty(Property p, long o) {
-		synchronized (model) {
-			return wrapped.hasProperty(p, o);
-		}
-	}
-
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.Object)
-	 */
-	public boolean hasProperty(Property p, Object o) {
-		synchronized (model) {
-			return wrapped.hasProperty(p, o);
-		}
-	}
-
-	/**
 	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
 	 */
 	public boolean hasProperty(Property p, RDFNode o) {
@@ -494,6 +392,84 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 
 	public boolean hasURI(String arg0) {
 		return !isAnon();
+	}
+
+	public Resource addLiteral(Property arg0, boolean arg1) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public Resource addLiteral(Property arg0, long arg1) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public Resource addLiteral(Property arg0, char arg1) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public Resource addLiteral(Property arg0, double arg1) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public Resource addLiteral(Property arg0, float arg1) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public Resource addLiteral(Property arg0, Object arg1) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public Resource addProperty(Property arg0, String arg1, RDFDatatype arg2) {
+		synchronized (model) {
+			return wrapped.addLiteral(arg0, arg1);
+		}
+	}
+
+	public boolean hasLiteral(Property arg0, boolean arg1) {
+		synchronized (model) {
+			return wrapped.hasLiteral(arg0, arg1);
+		}
+	}
+
+	public boolean hasLiteral(Property arg0, long arg1) {
+		synchronized (model) {
+			return wrapped.hasLiteral(arg0, arg1);
+		}
+	}
+
+	public boolean hasLiteral(Property arg0, char arg1) {
+		synchronized (model) {
+			return wrapped.hasLiteral(arg0, arg1);
+		}
+	}
+
+	public boolean hasLiteral(Property arg0, double arg1) {
+		synchronized (model) {
+			return wrapped.hasLiteral(arg0, arg1);
+		}
+	}
+
+	public boolean hasLiteral(Property arg0, float arg1) {
+		synchronized (model) {
+			return wrapped.hasLiteral(arg0, arg1);
+		}
+	}
+
+	public boolean hasLiteral(Property arg0, Object arg1) {
+		synchronized (model) {
+			return wrapped.hasLiteral(arg0, arg1);
+		}
 	}
 
 	/* (non-Javadoc)
