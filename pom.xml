@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.wymiwyg</groupId>
   <artifactId>wymiwyg-commons-jena</artifactId>
-  <version>0.5</version>
+  <version>0.5.1</version>
   <description>tools for rdf with jena</description>
   <build>
     <plugins>
