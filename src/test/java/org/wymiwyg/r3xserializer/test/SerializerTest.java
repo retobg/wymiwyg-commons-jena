@@ -44,27 +44,28 @@ import com.hp.hpl.jena.vocabulary.RDFS;
  */
 public class SerializerTest extends TestCase {
 
-	public void testSerializer() throws IOException, LanguageUnavailableException {
-		Model model = ModelFactory.createDefaultModel();
-		Resource resource = model.createResource();
-		resource.addProperty(RDFS.label, "Italiano", "it");
-		resource.addProperty(RDFS.label, "Italian", "en");
-		resource.addProperty(RDFS.label, "Italian");
-		model.createResource().addProperty(RDFS.seeAlso, resource);
-		model.createResource().addProperty(RDFS.seeAlso, resource);
-		Literal l = model.createTypedLiteral(new W3CDateFormat()
-                .format(new Date()), XSDDatatype.XSDdateTime);
-		model.createResource().addProperty(DC.date, l);
-		new Serializer().serialize(model, "",  new OutputStreamWriter(System.out), new Locale[0], new UnavailableLocalisationHandler() {
-
-			public Literal[] getReplacement(Literal[] availableLiterals) throws LanguageUnavailableException {
-				throw new LanguageUnavailableException();
-				//return new Literal[0];
-			}
-			
-		}, true);
-		model.write(System.out,"RDF/XML");
-	}
+	//no assertion!
+//	public void testSerializer() throws IOException, LanguageUnavailableException {
+//		Model model = ModelFactory.createDefaultModel();
+//		Resource resource = model.createResource();
+//		resource.addProperty(RDFS.label, "Italiano", "it");
+//		resource.addProperty(RDFS.label, "Italian", "en");
+//		resource.addProperty(RDFS.label, "Italian");
+//		model.createResource().addProperty(RDFS.seeAlso, resource);
+//		model.createResource().addProperty(RDFS.seeAlso, resource);
+//		Literal l = model.createTypedLiteral(new W3CDateFormat()
+//                .format(new Date()), XSDDatatype.XSDdateTime);
+//		model.createResource().addProperty(DC.date, l);
+//		new Serializer().serialize(model, "",  new OutputStreamWriter(System.out), new Locale[0], new UnavailableLocalisationHandler() {
+//
+//			public Literal[] getReplacement(Literal[] availableLiterals) throws LanguageUnavailableException {
+//				throw new LanguageUnavailableException();
+//				//return new Literal[0];
+//			}
+//			
+//		}, true);
+//		//model.write(System.out,"RDF/XML");
+//	}
 	
 	public void testSerializeDeserialize() throws IOException {
 		Model model = ModelFactory.createDefaultModel();
