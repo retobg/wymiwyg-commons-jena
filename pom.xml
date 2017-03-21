@@ -7,13 +7,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.wymiwyg</groupId>
   <artifactId>wymiwyg-commons-jena</artifactId>
-  <version>0.5.6</version>
+  <version>0.5.7-SNAPSHOT</version>
   <description>tools for rdf with jena</description>
   <scm>
     <developerConnection>scm:git:git@github.com:retog/wymiwyg-commons-jena.git</developerConnection>
     <connection>scm:git:https://github.com/retog/wymiwyg-commons-jena.git</connection>
     <url>https://github.com/retog/wymiwyg-commons-jena</url>
-    <tag>wymiwyg-commons-jena-0.5.6</tag>
+    <tag>HEAD</tag>
   </scm>
   <build>
     <plugins>
