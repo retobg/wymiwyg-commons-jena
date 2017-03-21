@@ -2,12 +2,12 @@
   <parent>
     <artifactId>wymiwyg</artifactId>
     <groupId>org.wymiwyg</groupId>
-    <version>0.9.6</version>
+    <version>0.9.8</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.wymiwyg</groupId>
   <artifactId>wymiwyg-commons-jena</artifactId>
-  <version>0.5.3</version>
+  <version>0.5.4-SNAPSHOT</version>
   <description>tools for rdf with jena</description>
   <build>
     <plugins>
@@ -38,4 +38,22 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <reporting>
+    <excludeDefaults>true</excludeDefaults>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.4</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>javadoc-no-fork</report>
+              <report>test-javadoc-no-fork</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
