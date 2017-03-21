@@ -78,7 +78,6 @@ public interface UnavailableLocalisationHandler {
 	 * <p>getReplacement.</p>
 	 *
 	 * @param availableLiterals all the available literal values of a property
-	 * @throws RendererException if any.
 	 * @return an array of {@link com.hp.hpl.jena.rdf.model.Literal} objects.
 	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
 	 */
