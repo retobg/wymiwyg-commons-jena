@@ -69,13 +69,18 @@ import com.hp.hpl.jena.rdf.model.ResourceF;
 import com.hp.hpl.jena.rdf.model.Seq;
 
 /**
+ * <p>ThreadSafeSeq class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	Seq wrapped;
 	/**
-	 * @param model
-	 * @param wrapped
+	 * <p>Constructor for ThreadSafeSeq.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public ThreadSafeSeq(ThreadSafeModel model, Seq wrapped) {
 		super(model, wrapped);
@@ -83,7 +88,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param index a int.
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq add(int index, RDFNode o) {
 		synchronized (model) {
@@ -93,7 +103,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, boolean)
+	 * @param index a int.
+	 * @param o a boolean.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq add(int index, boolean o) {
 		synchronized (model) {
@@ -103,7 +118,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, long)
+	 * @param index a int.
+	 * @param o a long.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq add(int index, long o) {
 		synchronized (model) {
@@ -113,7 +133,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, char)
+	 * @param index a int.
+	 * @param o a char.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq add(int index, char o) {
 		synchronized (model) {
@@ -123,7 +148,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, float)
+	 * @param index a int.
+	 * @param o a float.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq add(int index, float o) {
 		synchronized (model) {
@@ -133,7 +163,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, double)
+	 * @param index a int.
+	 * @param o a double.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq add(int index, double o) {
 		synchronized (model) {
@@ -142,9 +177,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Seq add(int index, String o) {
 		synchronized (model) {
 			wrapped.add(index, o);
@@ -152,9 +185,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Seq add(int index, String o, String l) {
 		synchronized (model) {
 			wrapped.add(index, o);
@@ -162,9 +193,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#add(int, java.lang.Object)
-	 */
+	/** {@inheritDoc} */
 	public Seq add(int index, Object o) {
 		synchronized (model) {
 			wrapped.add(index, o);
@@ -172,135 +201,105 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getBoolean(int)
-	 */
+	/** {@inheritDoc} */
 	public boolean getBoolean(int index) {
 		synchronized (model) {
 			return wrapped.getBoolean(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getByte(int)
-	 */
+	/** {@inheritDoc} */
 	public byte getByte(int index) {
 		synchronized (model) {
 			return wrapped.getByte(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getShort(int)
-	 */
+	/** {@inheritDoc} */
 	public short getShort(int index) {
 		synchronized (model) {
 			return wrapped.getShort(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getInt(int)
-	 */
+	/** {@inheritDoc} */
 	public int getInt(int index) {
 		synchronized (model) {
 			return wrapped.getInt(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getLong(int)
-	 */
+	/** {@inheritDoc} */
 	public long getLong(int index) {
 		synchronized (model) {
 			return wrapped.getLong(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getChar(int)
-	 */
+	/** {@inheritDoc} */
 	public char getChar(int index) {
 		synchronized (model) {
 			return wrapped.getChar(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getFloat(int)
-	 */
+	/** {@inheritDoc} */
 	public float getFloat(int index) {
 		synchronized (model) {
 			return wrapped.getFloat(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getDouble(int)
-	 */
+	/** {@inheritDoc} */
 	public double getDouble(int index) {
 		synchronized (model) {
 			return wrapped.getDouble(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getString(int)
-	 */
+	/** {@inheritDoc} */
 	public String getString(int index) {
 		synchronized (model) {
 			return wrapped.getString(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getLanguage(int)
-	 */
+	/** {@inheritDoc} */
 	public String getLanguage(int index) {
 		synchronized (model) {
 			return wrapped.getLanguage(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getObject(int, com.hp.hpl.jena.rdf.model.ObjectF)
-	 */
+	/** {@inheritDoc} */
 	public Object getObject(int index, ObjectF f) {
 		synchronized (model) {
 			return wrapped.getObject(index, f);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getResource(int, com.hp.hpl.jena.rdf.model.ResourceF)
-	 */
+	/** {@inheritDoc} */
 	public Resource getResource(int index, ResourceF f) {
 		synchronized (model) {
 			return new ThreadSafeResource(model, wrapped.getResource(index, f));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getLiteral(int)
-	 */
+	/** {@inheritDoc} */
 	public Literal getLiteral(int index) {
 		synchronized (model) {
 			return wrapped.getLiteral(index);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getResource(int)
-	 */
+	/** {@inheritDoc} */
 	public Resource getResource(int index) {
 		synchronized (model) {
 			return new ThreadSafeResource(model, wrapped.getResource(index));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getObject(int)
-	 */
+	/** {@inheritDoc} */
 	public RDFNode getObject(int index) {
 		synchronized (model) {
 			RDFNode wrappedResult = wrapped.getObject(index);
@@ -312,36 +311,28 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getBag(int)
-	 */
+	/** {@inheritDoc} */
 	public Bag getBag(int index) {
 		synchronized (model) {
 			return new ThreadSafeBag(model, wrapped.getBag(index));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getAlt(int)
-	 */
+	/** {@inheritDoc} */
 	public Alt getAlt(int index) {
 		synchronized (model) {
 			return new ThreadSafeAlt(model, wrapped.getAlt(index));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#getSeq(int)
-	 */
+	/** {@inheritDoc} */
 	public Seq getSeq(int index) {
 		synchronized (model) {
 			return new ThreadSafeSeq(model, wrapped.getSeq(index));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#remove(int)
-	 */
+	/** {@inheritDoc} */
 	public Seq remove(int index) {
 		synchronized (model) {
 			wrapped.remove(index);
@@ -350,7 +341,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a int.
 	 */
 	public int indexOf(RDFNode o) {
 		synchronized (model) {
@@ -364,7 +359,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(boolean)
+	 * @param o a boolean.
+	 * @return a int.
 	 */
 	public int indexOf(boolean o) {
 		synchronized (model) {
@@ -373,7 +372,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(long)
+	 * @param o a long.
+	 * @return a int.
 	 */
 	public int indexOf(long o) {
 		synchronized (model) {
@@ -382,7 +385,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(char)
+	 * @param o a char.
+	 * @return a int.
 	 */
 	public int indexOf(char o) {
 		synchronized (model) {
@@ -391,7 +398,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(float)
+	 * @param o a float.
+	 * @return a int.
 	 */
 	public int indexOf(float o) {
 		synchronized (model) {
@@ -399,9 +410,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(double)
-	 */
+	/** {@inheritDoc} */
 	public int indexOf(double o) {
 		synchronized (model) {
 			return wrapped.indexOf(o);
@@ -409,7 +418,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(java.lang.String)
+	 * @param o a {@link java.lang.String} object.
+	 * @return a int.
 	 */
 	public int indexOf(String o) {
 		synchronized (model) {
@@ -417,9 +430,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public int indexOf(String o, String l) {
 		synchronized (model) {
 			return wrapped.indexOf(o,l);
@@ -427,7 +438,11 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>indexOf.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#indexOf(java.lang.Object)
+	 * @param o a {@link java.lang.Object} object.
+	 * @return a int.
 	 */
 	public int indexOf(Object o) {
 		synchronized (model) {
@@ -436,7 +451,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param index a int.
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, RDFNode o) {
 		synchronized (model) {
@@ -445,7 +465,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, boolean)
+	 * @param index a int.
+	 * @param o a boolean.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, boolean o) {
 		synchronized (model) {
@@ -455,7 +480,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, long)
+	 * @param index a int.
+	 * @param o a long.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, long o) {
 		synchronized (model) {
@@ -465,7 +495,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, char)
+	 * @param index a int.
+	 * @param o a char.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, char o) {
 		synchronized (model) {
@@ -475,7 +510,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, float)
+	 * @param index a int.
+	 * @param o a float.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, float o) {
 		synchronized (model) {
@@ -485,7 +525,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, double)
+	 * @param index a int.
+	 * @param o a double.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, double o) {
 		synchronized (model) {
@@ -494,9 +539,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Seq set(int index, String o) {
 		synchronized (model) {
 			wrapped.set(index,o);
@@ -504,9 +547,7 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Seq set(int index, String o, String l) {
 		synchronized (model) {
 			wrapped.set(index,o);
@@ -515,7 +556,12 @@ public class ThreadSafeSeq extends ThreadSafeContainer implements Seq {
 	}
 
 	/**
+	 * <p>set.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Seq#set(int, java.lang.Object)
+	 * @param index a int.
+	 * @param o a {@link java.lang.Object} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq set(int index, Object o) {
 		synchronized (model) {

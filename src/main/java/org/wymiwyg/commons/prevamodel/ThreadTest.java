@@ -62,10 +62,18 @@ package org.wymiwyg.commons.prevamodel;
 import java.util.Vector;
 
 /**
+ * <p>ThreadTest class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadTest extends Thread {
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
 		Object obj = new ThreadHolder();
 		try {

@@ -27,10 +27,19 @@ import com.hp.hpl.jena.rdf.model.Seq;
 import com.hp.hpl.jena.vocabulary.DC;
 
 /**
+ * <p>Test class.</p>
+ *
  * @author reto
  * @date Jun 1, 2004
+ * @version $Id: $Id
  */
 public class Test {
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 * @throws java.io.IOException if any.
+	 */
 	public static void main(String[] args) throws IOException {
 		Model model = ModelFactory.createDefaultModel();
 		model.read("http://www.wasab.dk/morten/2004/03/label.rdf");

@@ -36,11 +36,14 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 /**
+ * <p>InsertionIFPResolver class.</p>
+ *
  * @author reto
- * 
+ *
  * Since KnoBot is typically run with a model that does not do inference. This
  * class provides a utility method to replace resources contained in an
  * insertion by their equivalents in the main-model
+ * @version $Id: $Id
  */
 public class InsertionIFPResolver {
 
@@ -60,9 +63,9 @@ public class InsertionIFPResolver {
 	 * This method does not itself insert the insertion into the mainModel, but
 	 * replaces resources in insertion with their counterpart in the mainModel,
 	 * ab subsequent mainModel.add(insertion) will not have/have less duplicate.
-	 * 
-	 * @param mainModel
-	 * @param insertion
+	 *
+	 * @param mainModel a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param insertion a {@link com.hp.hpl.jena.rdf.model.Model} object.
 	 */
 	public static void process(Model mainModel, Model insertion) {
 		StmtIterator statements = insertion.listStatements();

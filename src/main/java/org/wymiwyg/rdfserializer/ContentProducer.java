@@ -63,13 +63,18 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
+ * <p>ContentProducer interface.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public interface ContentProducer {
 	
 	/**
 	 * Writes the content to out
-	 * @param out
+	 *
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
 	 */
 	public void write(Writer out) throws IOException ;
 	

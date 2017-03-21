@@ -62,12 +62,30 @@ package org.wymiwyg.rdfserializer;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
+ * <p>TypeDescriptor interface.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public interface TypeDescriptor {
 	
+	/**
+	 * <p>getStyle.</p>
+	 *
+	 * @return a {@link org.wymiwyg.rdfserializer.Style} object.
+	 */
 	public Style getStyle();
+	/**
+	 * <p>getType.</p>
+	 *
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource getType();
+	/**
+	 * <p>isBlock.</p>
+	 *
+	 * @return a boolean.
+	 */
 	public boolean isBlock();
 
 }

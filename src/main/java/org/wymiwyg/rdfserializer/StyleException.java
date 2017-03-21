@@ -60,12 +60,15 @@
 package org.wymiwyg.rdfserializer;
 
 /**
+ * <p>StyleException class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class StyleException extends RuntimeException {
 
 	/**
-	 * 
+	 * <p>Constructor for StyleException.</p>
 	 */
 	public StyleException() {
 		super();
@@ -73,7 +76,9 @@ public class StyleException extends RuntimeException {
 	}
 
 	/**
-	 * @param arg0
+	 * <p>Constructor for StyleException.</p>
+	 *
+	 * @param arg0 a {@link java.lang.String} object.
 	 */
 	public StyleException(String arg0) {
 		super(arg0);
@@ -81,8 +86,10 @@ public class StyleException extends RuntimeException {
 	}
 
 	/**
-	 * @param arg0
-	 * @param arg1
+	 * <p>Constructor for StyleException.</p>
+	 *
+	 * @param arg0 a {@link java.lang.String} object.
+	 * @param arg1 a {@link java.lang.Throwable} object.
 	 */
 	public StyleException(String arg0, Throwable arg1) {
 		super(arg0, arg1);
@@ -90,7 +97,9 @@ public class StyleException extends RuntimeException {
 	}
 
 	/**
-	 * @param arg0
+	 * <p>Constructor for StyleException.</p>
+	 *
+	 * @param arg0 a {@link java.lang.Throwable} object.
 	 */
 	public StyleException(Throwable arg0) {
 		super(arg0);

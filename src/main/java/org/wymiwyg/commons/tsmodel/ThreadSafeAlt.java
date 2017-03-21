@@ -69,13 +69,19 @@ import com.hp.hpl.jena.rdf.model.ResourceF;
 import com.hp.hpl.jena.rdf.model.Seq;
 
 /**
+ * <p>ThreadSafeAlt class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 
 	Alt wrapped;
 	/**
-	 * 
+	 * <p>Constructor for ThreadSafeAlt.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public ThreadSafeAlt(ThreadSafeModel model, Alt wrapped) {
 		super(model, wrapped);
@@ -83,7 +89,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(RDFNode o) {
 		synchronized (model) {
@@ -93,7 +103,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(boolean)
+	 * @param o a boolean.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(boolean o) {
 		synchronized (model) {
@@ -103,7 +117,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(long)
+	 * @param o a long.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(long o) {
 		synchronized (model) {
@@ -112,9 +130,7 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(char)
-	 */
+	/** {@inheritDoc} */
 	public Alt setDefault(char o) {
 		synchronized (model) {
 			wrapped.setDefault(o);
@@ -123,7 +139,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(float)
+	 * @param o a float.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(float o) {
 		synchronized (model) {
@@ -133,7 +153,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(double)
+	 * @param o a double.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(double o) {
 		synchronized (model) {
@@ -143,7 +167,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(java.lang.String)
+	 * @param o a {@link java.lang.String} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(String o) {
 		synchronized (model) {
@@ -152,9 +180,7 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Alt setDefault(String o, String l) {
 		synchronized (model) {
 			wrapped.setDefault(o);
@@ -163,7 +189,11 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>setDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#setDefault(java.lang.Object)
+	 * @param o a {@link java.lang.Object} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt setDefault(Object o) {
 		synchronized (model) {
@@ -173,7 +203,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefault.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefault()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
 	 */
 	public RDFNode getDefault() {
 		// TODO Auto-generated method stub
@@ -181,7 +214,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultResource.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultResource()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource getDefaultResource() {
 		// TODO Auto-generated method stub
@@ -189,7 +225,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultLiteral.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultLiteral()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Literal} object.
 	 */
 	public Literal getDefaultLiteral() {
 		// TODO Auto-generated method stub
@@ -197,7 +236,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultBoolean.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultBoolean()
+	 * @return a boolean.
 	 */
 	public boolean getDefaultBoolean() {
 		synchronized (model) {
@@ -206,7 +248,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultByte.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultByte()
+	 * @return a byte.
 	 */
 	public byte getDefaultByte() {
 		synchronized (model) {
@@ -215,7 +260,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultShort.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultShort()
+	 * @return a short.
 	 */
 	public short getDefaultShort() {
 		synchronized (model) {
@@ -224,7 +272,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultInt.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultInt()
+	 * @return a int.
 	 */
 	public int getDefaultInt() {
 		synchronized (model) {
@@ -233,7 +284,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultLong.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultLong()
+	 * @return a long.
 	 */
 	public long getDefaultLong() {
 		synchronized (model) {
@@ -242,7 +296,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultChar.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultChar()
+	 * @return a char.
 	 */
 	public char getDefaultChar() {
 		synchronized (model) {
@@ -251,7 +308,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultFloat.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultFloat()
+	 * @return a float.
 	 */
 	public float getDefaultFloat() {
 		synchronized (model) {
@@ -260,7 +320,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultDouble.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultDouble()
+	 * @return a double.
 	 */
 	public double getDefaultDouble() {
 		synchronized (model) {
@@ -269,7 +332,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultString.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultString()
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getDefaultString() {
 		synchronized (model) {
@@ -278,7 +344,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultLanguage.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultLanguage()
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getDefaultLanguage() {
 		synchronized (model) {
@@ -286,18 +355,14 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultResource(com.hp.hpl.jena.rdf.model.ResourceF)
-	 */
+	/** {@inheritDoc} */
 	public Resource getDefaultResource(ResourceF f) {
 		synchronized (model) {
 			return new ThreadSafeResource(model, wrapped.getDefaultResource(f));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultObject(com.hp.hpl.jena.rdf.model.ObjectF)
-	 */
+	/** {@inheritDoc} */
 	public Object getDefaultObject(ObjectF f) {
 		synchronized (model) {
 			return wrapped.getDefaultObject(f);
@@ -305,7 +370,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultAlt.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultAlt()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Alt} object.
 	 */
 	public Alt getDefaultAlt() {
 		synchronized (model) {
@@ -314,7 +382,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultBag.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultBag()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Bag} object.
 	 */
 	public Bag getDefaultBag() {
 		synchronized (model) {
@@ -323,7 +394,10 @@ public class ThreadSafeAlt  extends ThreadSafeContainer implements Alt {
 	}
 
 	/**
+	 * <p>getDefaultSeq.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Alt#getDefaultSeq()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Seq} object.
 	 */
 	public Seq getDefaultSeq() {
 		synchronized (model) {

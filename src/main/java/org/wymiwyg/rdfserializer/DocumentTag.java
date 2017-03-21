@@ -54,7 +54,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
+ * <p>DocumentTag class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class DocumentTag implements ContentProducer {
 
@@ -62,7 +65,9 @@ public class DocumentTag implements ContentProducer {
 	Map nameSpaces = new HashMap();
 
 	/**
-	 * @param variables
+	 * <p>Constructor for DocumentTag.</p>
+	 *
+	 * @param variables a {@link java.util.Map} object.
 	 */
 	public DocumentTag(Map variables) {
 		this.variables = variables;
@@ -70,9 +75,7 @@ public class DocumentTag implements ContentProducer {
 		nameSpaces.put("http://www.w3.org/1999/02/22-rdf-syntax-ns#", "rdf");
 	}
 
-	/**
-	 * @see org.wymiwyg.rdfserializer.ContentProducer#write(java.io.Writer)
-	 */
+	/** {@inheritDoc} */
 	public void write(Writer out) throws IOException {
 		out.write("<rdf:RDF");
 		Iterator keyIter = nameSpaces.keySet().iterator();

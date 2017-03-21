@@ -52,27 +52,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <p>ContentSinkImpl class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ContentSinkImpl implements ContentSink {
 
 	List producers = new ArrayList();
 	int readingPos = 0;
 	/**
-	 *  
+	 * <p>Constructor for ContentSinkImpl.</p>
 	 */
 	public ContentSinkImpl() {
 		super();
 	}
 
-	/**
-	 * @see org.wymiwyg.rdfserializer.ContentSink#append(org.wymiwyg.rdfserializer.ContentProducer)
-	 */
+	/** {@inheritDoc} */
 	public void append(ContentProducer producer) {
 		producers.add(producer);
 	}
 
 	/**
+	 * <p>nextProducer.</p>
+	 *
 	 * @return the next producer if this is ready, the method blocks till a
 	 *               producer is ready, or null if the sink is closed
 	 */
@@ -85,6 +88,8 @@ public class ContentSinkImpl implements ContentSink {
 	}
 
 	/**
+	 * <p>close.</p>
+	 *
 	 * @see org.wymiwyg.rdfserializer.ContentSink#close()
 	 */
 	public void close() {

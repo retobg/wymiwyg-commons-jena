@@ -63,21 +63,24 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
+ * <p>ValueContentProducer class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ValueContentProducer implements ContentProducer {
 
 	String value;
 	/**
-	 * 
+	 * <p>Constructor for ValueContentProducer.</p>
+	 *
+	 * @param value a {@link java.lang.String} object.
 	 */
 	public ValueContentProducer(String value) {
 		this.value = value;
 	}
 
-	/**
-	 * @see org.wymiwyg.rdfserializer.ContentProducer#write(java.io.Writer)
-	 */
+	/** {@inheritDoc} */
 	public void write(Writer out) throws IOException {
 		out.write(value);
 

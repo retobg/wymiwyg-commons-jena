@@ -11,12 +11,21 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 /**
+ * <p>XMLEncoder class.</p>
+ *
  * @author reto
  *
  * To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Generation - Code and Comments
+ * @version $Id: $Id
  */
 public class XMLEncoder {
+	/**
+	 * <p>encode.</p>
+	 *
+	 * @param string a {@link java.lang.String} object.
+	 * @return a {@link java.lang.String} object.
+	 */
 	public static String encode(String string) {
 		StringReader in = new StringReader(string);
 		StringWriter out = new StringWriter();

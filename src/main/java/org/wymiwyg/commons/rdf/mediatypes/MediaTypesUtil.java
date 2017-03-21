@@ -35,8 +35,10 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
+ * <p>MediaTypesUtil class.</p>
+ *
  * @author reto
- * 
+ * @version $Id: $Id
  */
 public class MediaTypesUtil {
 
@@ -48,16 +50,32 @@ public class MediaTypesUtil {
 
 	private Map mimeCanonicalMimeMap = new HashMap();
 
+	/**
+	 * <p>Constructor for MediaTypesUtil.</p>
+	 *
+	 * @throws javax.activation.MimeTypeParseException if any.
+	 */
 	public MediaTypesUtil() throws MimeTypeParseException {
 		Model model = ModelFactory.createDefaultModel();
 		model.read(getClass().getResource("mimetypes.rdf").toString());
 		load(model);
 	}
+	/**
+	 * <p>Constructor for MediaTypesUtil.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @throws javax.activation.MimeTypeParseException if any.
+	 */
 	public MediaTypesUtil(Model model) throws MimeTypeParseException {
 		load(model);
 		
 	}
 	
+	/**
+	 * <p>Getter for the field <code>defaultInstance</code>.</p>
+	 *
+	 * @return a {@link org.wymiwyg.commons.rdf.mediatypes.MediaTypesUtil} object.
+	 */
 	public static MediaTypesUtil getDefaultInstance() {
 		if (defaultInstance == null) {
 			synchronized (MediaTypesUtil.class) {
@@ -73,6 +91,11 @@ public class MediaTypesUtil {
 		return defaultInstance;
 	}
 	
+	/**
+	 * <p>Setter for the field <code>defaultInstance</code>.</p>
+	 *
+	 * @param defaultInstance a {@link org.wymiwyg.commons.rdf.mediatypes.MediaTypesUtil} object.
+	 */
 	public static void setDefaultInstance(MediaTypesUtil defaultInstance) {
 		MediaTypesUtil.defaultInstance = defaultInstance;
 	}
@@ -148,10 +171,10 @@ public class MediaTypesUtil {
 
 	/**
 	 * returns the canonical mime-type for the the given extension
-	 * 
+	 *
 	 * @param extension
 	 *            the extension without dots
-	 * @return
+	 * @return a {@link org.wymiwyg.commons.mediatypes.MimeType} object.
 	 */
 	public MimeType getTypeForExtension(String extension) {
 		return (MimeType) extensionCanonicalMimeMap.get(extension);
@@ -159,14 +182,20 @@ public class MediaTypesUtil {
 
 	/**
 	 * get the extension for a given type
-	 * 
-	 * @param type
+	 *
+	 * @param type a {@link org.wymiwyg.commons.mediatypes.MimeType} object.
 	 * @return the extension without dots
 	 */
 	public String getExtensionForType(MimeType type) {
 		return (String) mimeCanonicalExtensionMap.get(type);
 	}
 
+	/**
+	 * <p>getCanonicalType.</p>
+	 *
+	 * @param type a {@link org.wymiwyg.commons.mediatypes.MimeType} object.
+	 * @return a {@link org.wymiwyg.commons.mediatypes.MimeType} object.
+	 */
 	public MimeType getCanonicalType(MimeType type) {
 		return (MimeType) mimeCanonicalMimeMap.get(type);
 	}

@@ -31,18 +31,27 @@ import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
- * @author reto
+ * <p>Generator class.</p>
  *
+ * @author reto
+ * @version $Id: $Id
  */
 public class Generator {
 
 	/**
-	 * 
+	 * <p>Constructor for Generator.</p>
 	 */
 	public Generator() {
 		super();
 	}
 	
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 * @throws java.net.URISyntaxException if any.
+	 * @throws java.io.IOException if any.
+	 */
 	public static void main(String[] args) throws URISyntaxException, IOException {
 		Model tzData = ModelFactory.createDefaultModel();
 		Model tzList = ModelFactory.createDefaultModel();

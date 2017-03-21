@@ -27,18 +27,19 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 
-/** A class to parse files like /etc/mime.types
- * Any line that doesn't start with # containst a mime-type followed by optional extensions, 
+/**
+ * A class to parse files like /etc/mime.types
+ * Any line that doesn't start with # containst a mime-type followed by optional extensions,
  * of which the first is the canonical one
- * 
- * @author reto
  *
+ * @author reto
+ * @version $Id: $Id
  */
 //additional file with: canonical alternative* mime-types?
 public class MimeTypeParser {
 
 	/**
-	 * 
+	 * <p>Constructor for MimeTypeParser.</p>
 	 */
 	public MimeTypeParser() {
 		super();
@@ -46,8 +47,10 @@ public class MimeTypeParser {
 	}
 
 	/**
-	 * @param args
-	 * @throws IOException 
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 * @throws java.io.IOException if any.
 	 */
 	public static void main(String[] args) throws IOException {
 		String filename;

@@ -57,12 +57,13 @@ import com.hp.hpl.jena.vocabulary.VCARD;
  * This is a serializer for the R3X format. R3X is a subset of RDF/XML defined
  * by Morten Frederiksen at
  * http://www.wasab.dk/morten/blog/archives/2004/05/30/transforming-rdfxml-with-xslt
- * 
+ *
  * This writer does not support multiple properties with literal values of the
  * same type and language
- * 
+ *
  * @author reto
  * @date Jun 1, 2004
+ * @version $Id: $Id
  */
 public class Serializer {
 	private static Log log = LogFactory.getLog(Serializer.class);
@@ -95,6 +96,14 @@ public class Serializer {
 		nonModelPrefixMap.put("http://frot.org/space/0.1/", "space");
 	}
 
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param base a {@link java.lang.String} object.
+	 * @param rawOut a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 */
 	public void serialize(Model model, String base, Writer rawOut)
 			throws IOException {
 		try {
@@ -105,6 +114,18 @@ public class Serializer {
 		}
 	}
 
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param base a {@link java.lang.String} object.
+	 * @param rawOut a {@link java.io.Writer} object.
+	 * @param locales an array of {@link java.util.Locale} objects.
+	 * @param localisationHandler a {@link org.wymiwyg.commons.jena.UnavailableLocalisationHandler} object.
+	 * @param forceShow a boolean.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(Model model, String base, Writer rawOut,
 			Locale[] locales,
 			UnavailableLocalisationHandler localisationHandler,

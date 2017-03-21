@@ -60,12 +60,15 @@
 package org.wymiwyg.rdfserializer;
 
 /**
+ * <p>NameSpaceAlreadyBoundException class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class NameSpaceAlreadyBoundException extends Exception {
 
 	/**
-	 * 
+	 * <p>Constructor for NameSpaceAlreadyBoundException.</p>
 	 */
 	public NameSpaceAlreadyBoundException() {
 		super();
@@ -73,7 +76,9 @@ public class NameSpaceAlreadyBoundException extends Exception {
 	}
 
 	/**
-	 * @param message
+	 * <p>Constructor for NameSpaceAlreadyBoundException.</p>
+	 *
+	 * @param message a {@link java.lang.String} object.
 	 */
 	public NameSpaceAlreadyBoundException(String message) {
 		super(message);
@@ -81,8 +86,10 @@ public class NameSpaceAlreadyBoundException extends Exception {
 	}
 
 	/**
-	 * @param message
-	 * @param cause
+	 * <p>Constructor for NameSpaceAlreadyBoundException.</p>
+	 *
+	 * @param message a {@link java.lang.String} object.
+	 * @param cause a {@link java.lang.Throwable} object.
 	 */
 	public NameSpaceAlreadyBoundException(String message, Throwable cause) {
 		super(message, cause);
@@ -90,7 +97,9 @@ public class NameSpaceAlreadyBoundException extends Exception {
 	}
 
 	/**
-	 * @param cause
+	 * <p>Constructor for NameSpaceAlreadyBoundException.</p>
+	 *
+	 * @param cause a {@link java.lang.Throwable} object.
 	 */
 	public NameSpaceAlreadyBoundException(Throwable cause) {
 		super(cause);

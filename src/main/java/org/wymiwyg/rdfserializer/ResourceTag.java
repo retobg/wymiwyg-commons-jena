@@ -61,7 +61,10 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
+ * <p>ResourceTag class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ResourceTag extends XMLTag {
 
@@ -69,7 +72,13 @@ public class ResourceTag extends XMLTag {
 	private String anonID = null;
 	private static int anonCounter = 0;
 	/**
-	 *  
+	 * <p>Constructor for ResourceTag.</p>
+	 *
+	 * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param style a {@link org.wymiwyg.rdfserializer.Style} object.
+	 * @param usedStatements a {@link java.util.Set} object.
+	 * @param variables a {@link java.util.Map} object.
+	 * @param urlBase a {@link java.lang.String} object.
 	 */
 	public ResourceTag(
 		Resource resource,
@@ -139,7 +148,9 @@ public class ResourceTag extends XMLTag {
 	}
 
 	/**
-	 * @return
+	 * <p>Getter for the field <code>anonID</code>.</p>
+	 *
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getAnonID() {
 		synchronized (ResourceTag.class) {

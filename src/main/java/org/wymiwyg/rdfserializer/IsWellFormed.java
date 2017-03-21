@@ -65,7 +65,19 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.xml.sax.InputSource;
+/**
+ * <p>IsWellFormed class.</p>
+ *
+ * @author user
+ * @version $Id: $Id
+ */
 public class IsWellFormed {
+	/**
+	 * <p>isWellFormed.</p>
+	 *
+	 * @param xmlContent a {@link java.lang.String} object.
+	 * @return a boolean.
+	 */
 	public static boolean isWellFormed(String xmlContent) {
 		try {
 			DocumentBuilderFactory domFactory = DocumentBuilderFactory

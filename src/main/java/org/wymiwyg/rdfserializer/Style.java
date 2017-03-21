@@ -57,13 +57,16 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
+ * <p>Style class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class Style {
 
 	Map prefixMap = new HashMap();
 	/**
-	 *  
+	 * <p>Constructor for Style.</p>
 	 */
 	public Style() {
 		super();
@@ -71,7 +74,9 @@ public class Style {
 	}
 	Resource styleRes;
 	/**
-	 * @param styleRes
+	 * <p>Constructor for Style.</p>
+	 *
+	 * @param styleRes a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Style(Resource styleRes) {
 		if (!styleRes.hasProperty(RDF.type, RDFSERIALIZER.Style)) {
@@ -100,6 +105,11 @@ public class Style {
 		}
 	}
 
+	/**
+	 * <p>getTypeDescriptors.</p>
+	 *
+	 * @return an array of {@link org.wymiwyg.rdfserializer.TypeDescriptor} objects.
+	 */
 	public TypeDescriptor[] getTypeDescriptors() {
 		Statement typeDescriptorStmt =
 		styleRes.getProperty(RDFSERIALIZER.typeDescriptors);
@@ -123,6 +133,11 @@ public class Style {
 		return result;
 	}
 
+	/**
+	 * <p>getPropertyDescriptors.</p>
+	 *
+	 * @return an array of {@link org.wymiwyg.rdfserializer.PropertyDescriptor} objects.
+	 */
 	public PropertyDescriptor[] getPropertyDescriptors() {
 		Statement propertyDescriptorStmt =
 			styleRes.getProperty(RDFSERIALIZER.propertyDescriptors);
@@ -146,19 +161,29 @@ public class Style {
 		return result;
 	}
 
+	/**
+	 * <p>getNameSpacePrefix.</p>
+	 *
+	 * @param nameSpace a {@link java.lang.String} object.
+	 * @return a {@link java.lang.String} object.
+	 */
 	public String getNameSpacePrefix(String nameSpace) {
 		return (String) prefixMap.get(nameSpace);
 	}
 
 	/**
-	 * @return
+	 * <p>getAnonymousDeepness.</p>
+	 *
+	 * @return a int.
 	 */
 	public int getAnonymousDeepness() {
 		return styleRes.getProperty(RDFSERIALIZER.anonymousDeepness).getInt();
 	}
 
 	/**
-	 * @return
+	 * <p>getNonAnonymousDeepness.</p>
+	 *
+	 * @return a int.
 	 */
 	public int getNonAnonymousDeepness() {
 		return styleRes

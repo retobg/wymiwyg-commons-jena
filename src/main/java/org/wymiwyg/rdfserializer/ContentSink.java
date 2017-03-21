@@ -60,10 +60,21 @@
 package org.wymiwyg.rdfserializer;
 
 /**
+ * <p>ContentSink interface.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public interface ContentSink {
+	/**
+	 * <p>append.</p>
+	 *
+	 * @param producer a {@link org.wymiwyg.rdfserializer.ContentProducer} object.
+	 */
 	public void append(ContentProducer producer);
 	
+	/**
+	 * <p>close.</p>
+	 */
 	public void close();
 }

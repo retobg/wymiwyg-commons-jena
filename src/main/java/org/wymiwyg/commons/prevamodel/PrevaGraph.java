@@ -89,7 +89,10 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.shared.ReificationStyle;
 /**
+ * <p>PrevaGraph class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class PrevaGraph extends GraphMem {
 	//private ModelCon modelCon = new ModelMem();
@@ -97,7 +100,11 @@ public class PrevaGraph extends GraphMem {
 	private int counter = 1;
 	private static Log logger = LogFactory.getLog(PrevaGraph.class);
 	/**
-	 *  
+	 * <p>Constructor for PrevaGraph.</p>
+	 *
+	 * @param directoryPath a {@link java.lang.String} object.
+	 * @param storeInterval a int.
+	 * @throws java.io.IOException if any.
 	 */
 	public PrevaGraph(String directoryPath, int storeInterval)
 			throws IOException {
@@ -149,7 +156,7 @@ public class PrevaGraph extends GraphMem {
 		stmtModel.write(writer, "N-TRIPLE");
 	}
 	/**
-	 *  
+	 * <p>removeLogs.</p>
 	 */
 	public synchronized void removeLogs() {
 		File[] logFiles = directory.listFiles(new FilenameFilter() {
@@ -166,9 +173,7 @@ public class PrevaGraph extends GraphMem {
 		}
 		counter = 1;
 	}
-	/**
-	 * @see com.hp.hpl.jena.graph.Graph#add(com.hp.hpl.jena.graph.Triple)
-	 */
+	/** {@inheritDoc} */
 	public synchronized void performAdd(Triple triple) {
 		super.performAdd(triple);
 		if (logger.isDebugEnabled()) {
@@ -180,9 +185,7 @@ public class PrevaGraph extends GraphMem {
 		}
 		log("add", triple);
 	}
-	/**
-	 * @see com.hp.hpl.jena.graph.Graph#delete(com.hp.hpl.jena.graph.Triple)
-	 */
+	/** {@inheritDoc} */
 	public synchronized void performDelete(Triple triple) {
 		super.performDelete(triple);
 		log("delete", triple);
@@ -268,9 +271,9 @@ public class PrevaGraph extends GraphMem {
 	}
 	/**
 	 * store model and delete logs
-	 * 
+	 *
 	 * @author reto
-	 *  
+	 * @throws java.io.IOException if any.
 	 */
 	public synchronized void store() throws IOException {
 		long start = System.currentTimeMillis();
@@ -305,14 +308,20 @@ public class PrevaGraph extends GraphMem {
 		
 	}
 	/**
+	 * <p>getBulkUpdateHandler.</p>
+	 *
 	 * @see com.hp.hpl.jena.graph.Graph#getBulkUpdateHandler()
+	 * @return a {@link com.hp.hpl.jena.graph.BulkUpdateHandler} object.
 	 */
 	public BulkUpdateHandler getBulkUpdateHandler() {
 		return new SimpleBulkUpdateHandler(this);
 		//return super.getBulkUpdateHandler();
 	}
 	/**
+	 * <p>getTransactionHandler.</p>
+	 *
 	 * @see com.hp.hpl.jena.graph.Graph#getTransactionHandler()
+	 * @return a {@link com.hp.hpl.jena.graph.TransactionHandler} object.
 	 */
 	public TransactionHandler getTransactionHandler() {
 		return new SimpleTransactionHandler();
@@ -323,13 +332,18 @@ class StroringThread extends Thread {
 	WeakReference modelRef;
 	long storeIntervalMilis;
 	/**
-	 * @param model
+	 * <p>Constructor for StroringThread.</p>
+	 *
+	 * @param graph a {@link org.wymiwyg.commons.prevamodel.PrevaGraph} object.
+	 * @param storeIntervalMilis a long.
 	 */
 	public StroringThread(PrevaGraph graph, long storeIntervalMilis) {
 		modelRef = new WeakReference(graph);
 		this.storeIntervalMilis = storeIntervalMilis;
 	}
 	/**
+	 * <p>run.</p>
+	 *
 	 * @see java.lang.Runnable#run()
 	 */
 	public void run() {

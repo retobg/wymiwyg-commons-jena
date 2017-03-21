@@ -49,7 +49,10 @@ package org.wymiwyg.rdfserializer.test;
 
 
 /**
+ * <p>Test2 class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class Test2 {
 

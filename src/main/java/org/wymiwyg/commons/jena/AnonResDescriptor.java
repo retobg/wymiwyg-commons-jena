@@ -25,6 +25,12 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
+/**
+ * <p>AnonResDescriptor class.</p>
+ *
+ * @author user
+ * @version $Id: $Id
+ */
 public class AnonResDescriptor {
 
     public class PropertyValuePair {
@@ -49,6 +55,11 @@ public class AnonResDescriptor {
 
     }
     Set properties = new HashSet();
+    /**
+     * <p>Constructor for AnonResDescriptor.</p>
+     *
+     * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+     */
     public AnonResDescriptor(Resource resource) {
        StmtIterator propertiesStmtIter = resource.listProperties();
        while (propertiesStmtIter.hasNext()) {
@@ -59,6 +70,7 @@ public class AnonResDescriptor {
        propertiesStmtIter.close();
     }
 
+    /** {@inheritDoc} */
     public boolean equals(Object obj) {
         if (!obj.getClass().equals(getClass())) {
             return false;
@@ -69,6 +81,11 @@ public class AnonResDescriptor {
 
     /* (non-Javadoc)
      * @see java.lang.Object#hashCode()
+     */
+    /**
+     * <p>hashCode.</p>
+     *
+     * @return a int.
      */
     public int hashCode() {
         return properties.hashCode();

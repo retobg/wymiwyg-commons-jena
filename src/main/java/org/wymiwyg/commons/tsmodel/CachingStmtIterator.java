@@ -74,7 +74,10 @@ import com.hp.hpl.jena.util.iterator.Filter;
 import com.hp.hpl.jena.util.iterator.Map1;
 
 /**
+ * <p>CachingStmtIterator class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class CachingStmtIterator implements StmtIterator {
 
@@ -82,7 +85,10 @@ public class CachingStmtIterator implements StmtIterator {
 	ThreadSafeModel model;
 	private List list;
 	/**
-	 * @param iterator
+	 * <p>Constructor for CachingStmtIterator.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param orig a {@link com.hp.hpl.jena.rdf.model.StmtIterator} object.
 	 */
 	public CachingStmtIterator(ThreadSafeModel model, StmtIterator orig) {
 		this.model = model;
@@ -99,45 +105,43 @@ public class CachingStmtIterator implements StmtIterator {
 	}*/
 
 	/**
+	 * <p>nextStatement.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.StmtIterator#nextStatement()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Statement} object.
+	 * @throws java.util.NoSuchElementException if any.
 	 */
 	public Statement nextStatement() throws NoSuchElementException {
 		return new ThreadSafeStatement(model, (Statement) iterator.next());
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#andThen(com.hp.hpl.jena.util.iterator.ClosableIterator)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator andThen(ClosableIterator other) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#filterKeep(com.hp.hpl.jena.util.iterator.Filter)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator filterKeep(Filter f) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#filterDrop(com.hp.hpl.jena.util.iterator.Filter)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator filterDrop(Filter f) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#mapWith(com.hp.hpl.jena.util.iterator.Map1)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator mapWith(Map1 map1) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
 	/**
+	 * <p>close.</p>
+	 *
 	 * @see com.hp.hpl.jena.util.iterator.ClosableIterator#close()
 	 */
 	public void close() {
@@ -146,20 +150,28 @@ public class CachingStmtIterator implements StmtIterator {
 	}
 
 	/**
+	 * <p>hasNext.</p>
+	 *
 	 * @see java.util.Iterator#hasNext()
+	 * @return a boolean.
 	 */
 	public boolean hasNext() {
 		return iterator.hasNext();
 	}
 
 	/**
+	 * <p>next.</p>
+	 *
 	 * @see java.util.Iterator#next()
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object next() {
 		return nextStatement();
 	}
 
 	/**
+	 * <p>remove.</p>
+	 *
 	 * @see java.util.Iterator#remove()
 	 */
 	public void remove() {
@@ -168,17 +180,30 @@ public class CachingStmtIterator implements StmtIterator {
 	}
 
 	/**
+	 * <p>removeNext.</p>
+	 *
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#removeNext()
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object removeNext() {
 		return nextStatement().remove();
 	}
 	
+	/**
+	 * <p>toList.</p>
+	 *
+	 * @return a {@link java.util.List} object.
+	 */
 	public List toList() {
 		return list;
 	}
 
 
+	/**
+	 * <p>toSet.</p>
+	 *
+	 * @return a {@link java.util.Set} object.
+	 */
 	public Set toSet() {
 		return new AbstractSet() {
 

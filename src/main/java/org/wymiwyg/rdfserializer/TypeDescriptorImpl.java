@@ -52,7 +52,10 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
+ * <p>TypeDescriptorImpl class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class TypeDescriptorImpl implements TypeDescriptor {
 
@@ -60,6 +63,12 @@ public class TypeDescriptorImpl implements TypeDescriptor {
 	private Style style;
 	private boolean block;
 
+	/**
+	 * <p>Constructor for TypeDescriptorImpl.</p>
+	 *
+	 * @param parentStyle a {@link org.wymiwyg.rdfserializer.Style} object.
+	 * @param typeDescriptor a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public TypeDescriptorImpl(Style parentStyle, Resource typeDescriptor) {
 		this.type = typeDescriptor.getProperty(RDFSERIALIZER.type).getResource();
 		if (typeDescriptor.hasProperty(RDFSERIALIZER.style)) {
@@ -77,20 +86,28 @@ public class TypeDescriptorImpl implements TypeDescriptor {
 				RDFSERIALIZER.BlockTypeDescriptor);
 	}
 	/**
+	 * <p>Getter for the field <code>style</code>.</p>
+	 *
 	 * @see org.wymiwyg.rdfserializer.TypeDescriptor#getStyle()
+	 * @return a {@link org.wymiwyg.rdfserializer.Style} object.
 	 */
 	public Style getStyle() {
 		return style;
 	}
 
 	/**
+	 * <p>Getter for the field <code>type</code>.</p>
+	 *
 	 * @see org.wymiwyg.rdfserializer.TypeDescriptor#getType()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource getType() {
 		return type;
 	}
 
 	/**
+	 * <p>isBlock.</p>
+	 *
 	 * @return Returns the block.
 	 */
 	public boolean isBlock() {

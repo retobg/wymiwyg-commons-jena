@@ -65,23 +65,31 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
+ * <p>NamedResourceGenerator class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class NamedResourceGenerator {
+	/** Constant <code>MAX_NAME_LENGTH=30</code> */
 	public static final int MAX_NAME_LENGTH = 30;
 
+	/** Constant <code>PREFFERRED_NAME_LENGTH=12</code> */
 	public static final int PREFFERRED_NAME_LENGTH = 12;
 
 	/**
 	 * This generates a relative URL starting with / represing a Resoure that
 	 * has no properties in the model yet and that starts with
 	 * /year/month/name[-ordinal].
-	 * 
+	 *
 	 * The name is generated from the title attribute as follows: - the part of
 	 * the title starting at the first dot is removed - all characters are
 	 * changed to lowercase - whitesaces are replaced with dash - ...
-	 * 
+	 *
 	 * @author reto
+	 * @param title a {@link java.lang.String} object.
+	 * @param date a {@link java.util.Date} object.
+	 * @return a {@link java.lang.String} object.
 	 */
 	public static String createURLPart(String title, Date date) {
 		StringBuffer out = new StringBuffer();
@@ -163,21 +171,55 @@ public class NamedResourceGenerator {
 		return out.toString();
 	}
 
+	/**
+	 * <p>createNewResource.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param urlBase a {@link java.net.URL} object.
+	 * @param title a {@link java.lang.String} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public static Resource createNewResource(Model model, URL urlBase,
 			String title) {
 		return createNewResourceFromSuffix(model, urlBase, getName(title));
 	}
+	/**
+	 * <p>createNewResource.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param urlBase a {@link java.net.URL} object.
+	 * @param title a {@link java.lang.String} object.
+	 * @param date a {@link java.util.Date} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public static Resource createNewResource(Model model, URL urlBase,
 			String title, Date date) {
 		return createNewResourceFromSuffix(model, urlBase, getName(title), date);
 	}
 
+	/**
+	 * <p>createNewResourceFromSuffix.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param urlBase a {@link java.net.URL} object.
+	 * @param suffix a {@link java.lang.String} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public static Resource createNewResourceFromSuffix(Model model,
 			URL urlBase, String suffix) {
 		return createNewResourceFromSuffix(model, urlBase, suffix,
 				new Date());
 	}
 
+	/**
+	 * <p>createNewResourceFromSuffix.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param urlBase a {@link java.net.URL} object.
+	 * @param suffix a {@link java.lang.String} object.
+	 * @param date a {@link java.util.Date} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public static Resource createNewResourceFromSuffix(Model model,
 			URL urlBase, String suffix, Date date) {
 		if ((suffix.length() > 0) && (suffix.charAt(0) == '/')) {

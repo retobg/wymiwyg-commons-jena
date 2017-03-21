@@ -52,14 +52,20 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
+ * <p>PropertyDescriptorImpl class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class PropertyDescriptorImpl implements PropertyDescriptor {
 
 	Property property;
 	Style style;
 	/**
-	 *  
+	 * <p>Constructor for PropertyDescriptorImpl.</p>
+	 *
+	 * @param parentStyle a {@link org.wymiwyg.rdfserializer.Style} object.
+	 * @param propertyDescriptor a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public PropertyDescriptorImpl(Style parentStyle, Resource propertyDescriptor) {
 		Model model = propertyDescriptor.getModel();
@@ -81,14 +87,20 @@ public class PropertyDescriptorImpl implements PropertyDescriptor {
 	}
 
 	/**
+	 * <p>Getter for the field <code>property</code>.</p>
+	 *
 	 * @see org.wymiwyg.rdfserializer.PropertyDescriptor#getProperty()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Property} object.
 	 */
 	public Property getProperty() {
 		return property;
 	}
 
 	/**
+	 * <p>Getter for the field <code>style</code>.</p>
+	 *
 	 * @see org.wymiwyg.rdfserializer.PropertyDescriptor#getStyle()
+	 * @return a {@link org.wymiwyg.rdfserializer.Style} object.
 	 */
 	public Style getStyle() {
 		return style;

@@ -73,7 +73,10 @@ import com.hp.hpl.jena.util.iterator.Filter;
 import com.hp.hpl.jena.util.iterator.Map1;
 
 /**
+ * <p>CachingRSIterator class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class CachingRSIterator implements RSIterator {
 
@@ -81,7 +84,10 @@ public class CachingRSIterator implements RSIterator {
 	ThreadSafeModel model;
 	private List list;
 	/**
-	 * @param iterator
+	 * <p>Constructor for CachingRSIterator.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param orig a {@link com.hp.hpl.jena.rdf.model.RSIterator} object.
 	 */
 	public CachingRSIterator(ThreadSafeModel model, RSIterator orig) {
 		list = new ArrayList();
@@ -94,13 +100,18 @@ public class CachingRSIterator implements RSIterator {
 	}
 
 	/**
+	 * <p>nextRS.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.RSIterator#nextRS()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.ReifiedStatement} object.
 	 */
 	public ReifiedStatement nextRS() {
 		return new ThreadSafeReifiedStatement(model, (ReifiedStatement) iterator.next());
 	}
 
 	/**
+	 * <p>close.</p>
+	 *
 	 * @see com.hp.hpl.jena.util.iterator.ClosableIterator#close()
 	 */
 	public void close() {
@@ -108,20 +119,28 @@ public class CachingRSIterator implements RSIterator {
 	}
 
 	/**
+	 * <p>hasNext.</p>
+	 *
 	 * @see java.util.Iterator#hasNext()
+	 * @return a boolean.
 	 */
 	public boolean hasNext() {
 		return iterator.hasNext();
 	}
 
 	/**
+	 * <p>next.</p>
+	 *
 	 * @see java.util.Iterator#next()
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object next() {
 		return iterator.next();
 	}
 
 	/**
+	 * <p>remove.</p>
+	 *
 	 * @see java.util.Iterator#remove()
 	 */
 	public void remove() {
@@ -130,11 +149,21 @@ public class CachingRSIterator implements RSIterator {
 	}
 	
 	
+	/**
+	 * <p>toList.</p>
+	 *
+	 * @return a {@link java.util.List} object.
+	 */
 	public List toList() {
 		return list;
 	}
 
 
+	/**
+	 * <p>toSet.</p>
+	 *
+	 * @return a {@link java.util.Set} object.
+	 */
 	public Set toSet() {
 		return new AbstractSet() {
 
@@ -155,6 +184,7 @@ public class CachingRSIterator implements RSIterator {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#andThen(com.hp.hpl.jena.util.iterator.ClosableIterator)
 	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator andThen(ClosableIterator arg0) {
 //		 TODO implement
 		throw new RuntimeException("Not yet implemented");
@@ -163,6 +193,7 @@ public class CachingRSIterator implements RSIterator {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#filterDrop(com.hp.hpl.jena.util.iterator.Filter)
 	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator filterDrop(Filter arg0) {
 //		 TODO implement
 		throw new RuntimeException("Not yet implemented");
@@ -171,6 +202,7 @@ public class CachingRSIterator implements RSIterator {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#filterKeep(com.hp.hpl.jena.util.iterator.Filter)
 	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator filterKeep(Filter arg0) {
 //		 TODO implement
 		throw new RuntimeException("Not yet implemented");
@@ -179,6 +211,7 @@ public class CachingRSIterator implements RSIterator {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#mapWith(com.hp.hpl.jena.util.iterator.Map1)
 	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator mapWith(Map1 arg0) {
 //		 TODO implement
 		throw new RuntimeException("Not yet implemented");
@@ -186,6 +219,11 @@ public class CachingRSIterator implements RSIterator {
 
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#removeNext()
+	 */
+	/**
+	 * <p>removeNext.</p>
+	 *
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object removeNext() {
 //		 TODO implement

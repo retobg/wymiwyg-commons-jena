@@ -52,7 +52,10 @@ import java.io.Writer;
 import java.util.Map;
 
 /**
+ * <p>XMLTag class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class XMLTag implements ContentProducer {
 
@@ -68,16 +71,17 @@ public class XMLTag implements ContentProducer {
 	private static ThreadLocal indentationHolder = new ThreadLocal();
 
 	/**
-	 *  
+	 * <p>Constructor for XMLTag.</p>
+	 *
+	 * @param style a {@link org.wymiwyg.rdfserializer.Style} object.
+	 * @param variables a {@link java.util.Map} object.
 	 */
 	public XMLTag(Style style, Map variables) {
 		this.variables = variables;
 		this.style = style;
 	}
 
-	/**
-	 * @see org.wymiwyg.rdfserializer.ContentProducer#write(java.io.Writer)
-	 */
+	/** {@inheritDoc} */
 	public void write(Writer out) throws IOException {
 		Integer indentation = (Integer) indentationHolder.get();
 		if (indentation == null) {
@@ -103,6 +107,13 @@ public class XMLTag implements ContentProducer {
 
 	}
 
+	/**
+	 * <p>addAttribute.</p>
+	 *
+	 * @param nameSpace a {@link java.lang.String} object.
+	 * @param localName a {@link java.lang.String} object.
+	 * @param value a {@link java.lang.String} object.
+	 */
 	public void addAttribute(
 		String nameSpace,
 		String localName,
@@ -118,6 +129,8 @@ public class XMLTag implements ContentProducer {
 	}
 
 	/**
+	 * <p>Setter for the field <code>localName</code>.</p>
+	 *
 	 * @param localName
 	 *                   The localName to set.
 	 */
@@ -126,6 +139,8 @@ public class XMLTag implements ContentProducer {
 	}
 
 	/**
+	 * <p>setNameSpace.</p>
+	 *
 	 * @param nameSpace
 	 *                   The nameSpace to set.
 	 */
@@ -191,8 +206,10 @@ public class XMLTag implements ContentProducer {
 	}
 
 	/**
-	 * @param string
-	 * @param language
+	 * <p>addXMLAttribute.</p>
+	 *
+	 * @param localName a {@link java.lang.String} object.
+	 * @param value a {@link java.lang.String} object.
 	 */
 	public void addXMLAttribute(String localName, String value) {
 		attributes.append(" xml:");
@@ -202,10 +219,15 @@ public class XMLTag implements ContentProducer {
 		attributes.append("\" ");
 	}
 
+	/**
+	 * <p>close.</p>
+	 */
 	public void close() {
 		closed = true;
 	}
 	/**
+	 * <p>isPreserveSpaces.</p>
+	 *
 	 * @return Returns the preserveSpaces.
 	 */
 	public boolean isPreserveSpaces() {
@@ -213,6 +235,8 @@ public class XMLTag implements ContentProducer {
 	}
 
 	/**
+	 * <p>Setter for the field <code>preserveSpaces</code>.</p>
+	 *
 	 * @param preserveSpaces The preserveSpaces to set.
 	 */
 	public void setPreserveSpaces(boolean preserveSpaces) {

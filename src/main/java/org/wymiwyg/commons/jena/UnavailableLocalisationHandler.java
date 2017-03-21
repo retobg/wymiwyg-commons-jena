@@ -64,18 +64,23 @@ import org.wymiwyg.commons.util.LanguageUnavailableException;
 
 import com.hp.hpl.jena.rdf.model.Literal;
 
-/** Instances of this interface may be passed to local aware RDF-Processors
+/**
+ * Instances of this interface may be passed to local aware RDF-Processors
  * so the caller gets a call-back when a properties value is not available
  * in one of the supported locales
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public interface UnavailableLocalisationHandler {
 	
 	/**
-	 * 
+	 * <p>getReplacement.</p>
+	 *
 	 * @param availableLiterals all the available literal values of a property
-	 * @return
-	 * @throws RendererException
+	 * @throws RendererException if any.
+	 * @return an array of {@link com.hp.hpl.jena.rdf.model.Literal} objects.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
 	 */
 	Literal[] getReplacement(Literal[] availableLiterals) throws LanguageUnavailableException;
 

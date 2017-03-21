@@ -62,9 +62,22 @@ package org.wymiwyg.rdfserializer;
 import com.hp.hpl.jena.rdf.model.Property;
 
 /**
+ * <p>PropertyDescriptor interface.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public interface PropertyDescriptor {
+	/**
+	 * <p>getProperty.</p>
+	 *
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 */
 	public Property getProperty();
+	/**
+	 * <p>getStyle.</p>
+	 *
+	 * @return a {@link org.wymiwyg.rdfserializer.Style} object.
+	 */
 	public Style getStyle();
 }

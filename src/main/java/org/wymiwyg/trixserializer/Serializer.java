@@ -75,16 +75,28 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 /**
+ * <p>Serializer class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class Serializer {
 	Log log = LogFactory.getLog(Serializer.class);
 	/**
-	 *  
+	 * <p>Constructor for Serializer.</p>
 	 */
 	public Serializer() {
 		super();
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param base a {@link java.lang.String} object.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.util.NoSuchElementException if any.
+	 * @throws java.io.IOException if any.
+	 */
 	public void serialize(Model model, String base, Writer out)
 			throws NoSuchElementException, IOException {
 		PrintWriter pOut = new PrintWriter(out);

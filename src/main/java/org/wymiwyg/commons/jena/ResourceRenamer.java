@@ -62,12 +62,18 @@ package org.wymiwyg.commons.jena;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
+ * <p>ResourceRenamer interface.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public interface ResourceRenamer {
 
 	/**
-	 * @param resource
+	 * <p>getNewName.</p>
+	 *
+	 * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getNewName(Resource resource);
 

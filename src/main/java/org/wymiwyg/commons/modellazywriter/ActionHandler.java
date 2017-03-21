@@ -9,6 +9,12 @@ import java.util.WeakHashMap;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelLock;
 
+/**
+ * <p>ActionHandler class.</p>
+ *
+ * @author user
+ * @version $Id: $Id
+ */
 public class ActionHandler {
 	private Reference modelRef;
 	private LinkedList actionList = new LinkedList();
@@ -33,7 +39,6 @@ public class ActionHandler {
 	/**
 	 * The invoker of this method must not have a Lock
 	 * on the model of this ActionHandler
-	 *
 	 */
 	public void performActions() {
 		if (actionList.size() != 0) {
@@ -50,11 +55,22 @@ public class ActionHandler {
 		}
 	}
 	
+	/**
+	 * <p>addAction.</p>
+	 *
+	 * @param action a {@link org.wymiwyg.commons.modellazywriter.ModelAction} object.
+	 */
 	public synchronized void addAction(ModelAction action) {
 		actionList.add(action);
 
 	}
 	
+	/**
+	 * <p>getActionHandler.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @return a {@link org.wymiwyg.commons.modellazywriter.ActionHandler} object.
+	 */
 	public static ActionHandler getActionHandler(Model model) {
 		ActionHandler result = (ActionHandler) map.get(model);
 		if (result == null) {

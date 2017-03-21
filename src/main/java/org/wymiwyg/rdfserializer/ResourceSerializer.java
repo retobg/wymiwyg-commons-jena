@@ -77,7 +77,10 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
 /**
+ * <p>ResourceSerializer class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ResourceSerializer {
 	/**
@@ -112,7 +115,7 @@ public class ResourceSerializer {
 	//set this to false in order that well formed literals are not escaped
 	private final static boolean escapeWellFormedLiteral = true;
 	/**
-	 *  
+	 * <p>Constructor for ResourceSerializer.</p>
 	 */
 	public ResourceSerializer() {
 		super();
@@ -123,14 +126,42 @@ public class ResourceSerializer {
 		return styleModel
 				.getResource("http://wymiwyg.org/rdfserializer/default-style#default");
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param resources an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(final Resource[] resources, Writer out)
 			throws IOException, LanguageUnavailableException {
 		serialize(resources, (String) null, out);
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param resources an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @param urlBase a {@link java.lang.String} object.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(final Resource[] resources, String urlBase, Writer out)
 			throws IOException, LanguageUnavailableException {
 		serialize(resources, getDefaultStyle(), urlBase, out);
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param resources an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @param urlBase a {@link java.lang.String} object.
+	 * @param languages an array of {@link java.lang.String} objects.
+	 * @param localisationHandler a {@link org.wymiwyg.commons.jena.UnavailableLocalisationHandler} object.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(Resource[] resources, String urlBase,
 			String[] languages,
 			UnavailableLocalisationHandler localisationHandler, Writer out)
@@ -138,14 +169,45 @@ public class ResourceSerializer {
 		serialize(resources, getDefaultStyle(), urlBase, languages,
 				localisationHandler, out);
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param resources an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @param styleRes a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(final Resource[] resources, Resource styleRes,
 			Writer out) throws IOException, LanguageUnavailableException {
 		serialize(resources, styleRes, null, out);
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param resources an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @param styleRes a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param urlBase a {@link java.lang.String} object.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(final Resource[] resources, Resource styleRes,
 			String urlBase, Writer out) throws IOException, LanguageUnavailableException {
 		serialize(resources, styleRes, urlBase, null, null, out);
 	}
+	/**
+	 * <p>serialize.</p>
+	 *
+	 * @param resources an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @param styleRes a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param urlBase a {@link java.lang.String} object.
+	 * @param languages an array of {@link java.lang.String} objects.
+	 * @param localisationHandler a {@link org.wymiwyg.commons.jena.UnavailableLocalisationHandler} object.
+	 * @param out a {@link java.io.Writer} object.
+	 * @throws java.io.IOException if any.
+	 * @throws org.wymiwyg.commons.util.LanguageUnavailableException if any.
+	 */
 	public void serialize(final Resource[] resources, Resource styleRes,
 			String urlBase, String[] languages,
 			UnavailableLocalisationHandler localisationHandler, Writer out)

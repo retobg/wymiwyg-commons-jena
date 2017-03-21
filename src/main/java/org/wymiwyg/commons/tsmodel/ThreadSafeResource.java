@@ -77,7 +77,10 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 /**
+ * <p>ThreadSafeResource class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeResource extends EnhNode implements Resource {
 
@@ -87,8 +90,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	private Resource wrapped;
 
 	/**
-	 * @param model
-	 * @param wrapped
+	 * <p>Constructor for ThreadSafeResource.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public ThreadSafeResource(ThreadSafeModel model, Resource wrapped) {
 		//actually I don't want to subclass EnhNode!
@@ -100,7 +105,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>abort.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#abort()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource abort() {
 		wrapped.abort();
@@ -109,32 +117,31 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 
 
 	/**
+	 * <p>addProperty.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param p a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource addProperty(Property p, RDFNode o) {
 		model.add(this, p, o);
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Resource addProperty(Property p, String o) {
 		model.add(this, p, o);
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#addProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Resource addProperty(Property p, String o, String l) {
 		model.add(this, p, o, l);
 		return this;
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.RDFNode#as(java.lang.Class)
-	 */
+	/** {@inheritDoc} */
 	public RDFNode as(Class view) {
 		// TODO implement
 		logger.warn("Synchronization not implemented");
@@ -142,7 +149,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>asNode.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.RDFNode#asNode()
+	 * @return a {@link com.hp.hpl.jena.graph.Node} object.
 	 */
 	public Node asNode() {
 		// TODO is graph level sync needed?
@@ -151,7 +161,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>begin.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#begin()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource begin() {
 		synchronized (model) {
@@ -161,9 +174,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * {@inheritDoc}
+	 *
 	 * Since multiple threads may access the model just because
-	 * canAs returns true doesn't mean .as will work. 
-	 * 
+	 * canAs returns true doesn't mean .as will work.
 	 * @see com.hp.hpl.jena.rdf.model.RDFNode#canAs(java.lang.Class)
 	 */
 	public boolean canAs(Class view) {
@@ -173,7 +187,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>commit.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#commit()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource commit() {
 		synchronized (model) {
@@ -183,7 +200,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>getId.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#getId()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.AnonId} object.
 	 */
 	public AnonId getId() {
 		synchronized (model) {
@@ -192,7 +212,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>getLocalName.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#getLocalName()
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getLocalName() {
 		synchronized (model) {
@@ -201,14 +224,20 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>Getter for the field <code>model</code>.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#getModel()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Model} object.
 	 */
 	public Model getModel() {
 		return model;
 	}
 
 	/**
+	 * <p>getNameSpace.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#getNameSpace()
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getNameSpace() {
 		synchronized (model) {
@@ -217,7 +246,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>getNode.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#getNode()
+	 * @return a {@link com.hp.hpl.jena.graph.Node} object.
 	 */
 	public Node getNode() {
 		// TODO implement
@@ -225,9 +257,7 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		return wrapped.getNode();
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#getProperty(com.hp.hpl.jena.rdf.model.Property)
-	 */
+	/** {@inheritDoc} */
 	public Statement getProperty(Property p) {
 		synchronized (model) {
 			Statement wrappedResult = wrapped.getProperty(p);
@@ -238,9 +268,7 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#getRequiredProperty(com.hp.hpl.jena.rdf.model.Property)
-	 */
+	/** {@inheritDoc} */
 	public Statement getRequiredProperty(Property p) {
 		synchronized (model) {
 			return new ThreadSafeStatement(
@@ -250,7 +278,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>getURI.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#getURI()
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String getURI() {
 		synchronized (model) {
@@ -258,9 +289,7 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property)
-	 */
+	/** {@inheritDoc} */
 	public boolean hasProperty(Property p) {
 		synchronized (model) {
 			return wrapped.hasProperty(p);
@@ -268,7 +297,12 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>hasProperty.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param p a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a boolean.
 	 */
 	public boolean hasProperty(Property p, RDFNode o) {
 		synchronized (model) {
@@ -276,27 +310,21 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public boolean hasProperty(Property p, String o) {
 		synchronized (model) {
 			return wrapped.hasProperty(p, o);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#hasProperty(com.hp.hpl.jena.rdf.model.Property, java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public boolean hasProperty(Property p, String o, String l) {
 		synchronized (model) {
 			return wrapped.hasProperty(p, o, l);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.RDFNode#inModel(com.hp.hpl.jena.rdf.model.Model)
-	 */
+	/** {@inheritDoc} */
 	public RDFNode inModel(Model m) {
 		return wrapped.inModel(m);
 	}
@@ -312,7 +340,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}*/
 
 	/**
+	 * <p>listProperties.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#listProperties()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.StmtIterator} object.
 	 */
 	public StmtIterator listProperties() {
 		synchronized (model) {
@@ -320,18 +351,14 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#listProperties(com.hp.hpl.jena.rdf.model.Property)
-	 */
+	/** {@inheritDoc} */
 	public StmtIterator listProperties(Property p) {
 		synchronized (model) {
 			return new CachingStmtIterator(model, wrapped.listProperties(p));
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Resource#removeAll(com.hp.hpl.jena.rdf.model.Property)
-	 */
+	/** {@inheritDoc} */
 	public Resource removeAll(Property p) {
 		synchronized (model) {
 			wrapped.removeAll(p);
@@ -340,7 +367,10 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}
 
 	/**
+	 * <p>removeProperties.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Resource#removeProperties()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource removeProperties() {
 		synchronized (model) {
@@ -349,9 +379,7 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.RDFNode#visitWith(com.hp.hpl.jena.rdf.model.RDFVisitor)
-	 */
+	/** {@inheritDoc} */
 	public Object visitWith(RDFVisitor rv) {
 		synchronized (model) {
 			return wrapped.visitWith(rv);
@@ -384,88 +412,172 @@ public class ThreadSafeResource extends EnhNode implements Resource {
 	}*/
 
 	/**
+	 * <p>toString.</p>
+	 *
 	 * @see java.lang.Object#toString()
+	 * @return a {@link java.lang.String} object.
 	 */
 	public String toString() {
 		return wrapped.toString();
 	}
 
+	/** {@inheritDoc} */
 	public boolean hasURI(String arg0) {
 		return !isAnon();
 	}
 
+	/**
+	 * <p>addLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a boolean.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource addLiteral(Property arg0, boolean arg1) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>addLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a long.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource addLiteral(Property arg0, long arg1) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/** {@inheritDoc} */
 	public Resource addLiteral(Property arg0, char arg1) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>addLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a double.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource addLiteral(Property arg0, double arg1) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>addLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a float.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource addLiteral(Property arg0, float arg1) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>addLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a {@link java.lang.Object} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource addLiteral(Property arg0, Object arg1) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>addProperty.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a {@link java.lang.String} object.
+	 * @param arg2 a {@link com.hp.hpl.jena.datatypes.RDFDatatype} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public Resource addProperty(Property arg0, String arg1, RDFDatatype arg2) {
 		synchronized (model) {
 			return wrapped.addLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>hasLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a boolean.
+	 * @return a boolean.
+	 */
 	public boolean hasLiteral(Property arg0, boolean arg1) {
 		synchronized (model) {
 			return wrapped.hasLiteral(arg0, arg1);
 		}
 	}
 
+	/** {@inheritDoc} */
 	public boolean hasLiteral(Property arg0, long arg1) {
 		synchronized (model) {
 			return wrapped.hasLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>hasLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a char.
+	 * @return a boolean.
+	 */
 	public boolean hasLiteral(Property arg0, char arg1) {
 		synchronized (model) {
 			return wrapped.hasLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>hasLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a double.
+	 * @return a boolean.
+	 */
 	public boolean hasLiteral(Property arg0, double arg1) {
 		synchronized (model) {
 			return wrapped.hasLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>hasLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a float.
+	 * @return a boolean.
+	 */
 	public boolean hasLiteral(Property arg0, float arg1) {
 		synchronized (model) {
 			return wrapped.hasLiteral(arg0, arg1);
 		}
 	}
 
+	/**
+	 * <p>hasLiteral.</p>
+	 *
+	 * @param arg0 a {@link com.hp.hpl.jena.rdf.model.Property} object.
+	 * @param arg1 a {@link java.lang.Object} object.
+	 * @return a boolean.
+	 */
 	public boolean hasLiteral(Property arg0, Object arg1) {
 		synchronized (model) {
 			return wrapped.hasLiteral(arg0, arg1);

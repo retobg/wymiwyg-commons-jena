@@ -62,7 +62,10 @@ package org.wymiwyg.commons.tsmodel;
 import com.hp.hpl.jena.rdf.model.Property;
 
 /**
+ * <p>ThreadSafeProperty class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeProperty
 	extends ThreadSafeResource
@@ -70,8 +73,10 @@ public class ThreadSafeProperty
 
 	Property wrapped;
 	/**
-	 * @param model
-	 * @param wrapped
+	 * <p>Constructor for ThreadSafeProperty.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.Property} object.
 	 */
 	public ThreadSafeProperty(ThreadSafeModel model, Property wrapped) {
 		super(model, wrapped);
@@ -79,7 +84,10 @@ public class ThreadSafeProperty
 	}
 
 	/**
+	 * <p>isProperty.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Property#isProperty()
+	 * @return a boolean.
 	 */
 	public boolean isProperty() {
 		synchronized (model) {
@@ -88,7 +96,10 @@ public class ThreadSafeProperty
 	}
 
 	/**
+	 * <p>getOrdinal.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Property#getOrdinal()
+	 * @return a int.
 	 */
 	public int getOrdinal() {
 		synchronized (model) {

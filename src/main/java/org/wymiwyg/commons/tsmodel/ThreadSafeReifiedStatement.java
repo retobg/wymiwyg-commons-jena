@@ -63,7 +63,10 @@ import com.hp.hpl.jena.rdf.model.ReifiedStatement;
 import com.hp.hpl.jena.rdf.model.Statement;
 
 /**
+ * <p>ThreadSafeReifiedStatement class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeReifiedStatement
 	extends ThreadSafeResource
@@ -71,8 +74,10 @@ public class ThreadSafeReifiedStatement
 
 	ReifiedStatement wrapped;
 	/**
-	 * @param model
-	 * @param wrapped
+	 * <p>Constructor for ThreadSafeReifiedStatement.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.ReifiedStatement} object.
 	 */
 	public ThreadSafeReifiedStatement(
 		ThreadSafeModel model,
@@ -82,7 +87,10 @@ public class ThreadSafeReifiedStatement
 	}
 
 	/**
+	 * <p>getStatement.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.ReifiedStatement#getStatement()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Statement} object.
 	 */
 	public Statement getStatement() {
 		synchronized (model) {

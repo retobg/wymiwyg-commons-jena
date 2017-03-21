@@ -72,14 +72,20 @@ import com.hp.hpl.jena.mem.GraphMem;
 import com.hp.hpl.jena.shared.ReificationStyle;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 /**
+ * <p>CacheGraph class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class CacheGraph extends GraphMem {
 	//private ModelCon modelCon = new ModelMem();
 	private GraphBase baseGraph;
 	private static Log logger = LogFactory.getLog(CacheGraph.class);
 	/**
-	 *  
+	 * <p>Constructor for CacheGraph.</p>
+	 *
+	 * @param baseGraph a {@link com.hp.hpl.jena.graph.impl.GraphBase} object.
+	 * @throws java.io.IOException if any.
 	 */
 	public CacheGraph(GraphBase baseGraph)
 			throws IOException {
@@ -93,30 +99,32 @@ public class CacheGraph extends GraphMem {
 	}
 	
 	
-	/**
-	 * @see com.hp.hpl.jena.graph.Graph#add(com.hp.hpl.jena.graph.Triple)
-	 */
+	/** {@inheritDoc} */
 	public synchronized void performAdd(Triple triple) {
 		super.performAdd(triple);
 		baseGraph.performAdd(triple);
 	}
-	/**
-	 * @see com.hp.hpl.jena.graph.Graph#delete(com.hp.hpl.jena.graph.Triple)
-	 */
+	/** {@inheritDoc} */
 	public synchronized void performDelete(Triple triple) {
 		super.performDelete(triple);
 		baseGraph.performDelete(triple);
 	}
 	
 	/**
+	 * <p>getBulkUpdateHandler.</p>
+	 *
 	 * @see com.hp.hpl.jena.graph.Graph#getBulkUpdateHandler()
+	 * @return a {@link com.hp.hpl.jena.graph.BulkUpdateHandler} object.
 	 */
 	public BulkUpdateHandler getBulkUpdateHandler() {
 		return new SimpleBulkUpdateHandler(this);
 		//return super.getBulkUpdateHandler();
 	}
 	/**
+	 * <p>getTransactionHandler.</p>
+	 *
 	 * @see com.hp.hpl.jena.graph.Graph#getTransactionHandler()
+	 * @return a {@link com.hp.hpl.jena.graph.TransactionHandler} object.
 	 */
 	public TransactionHandler getTransactionHandler() {
 		return new SimpleTransactionHandler();

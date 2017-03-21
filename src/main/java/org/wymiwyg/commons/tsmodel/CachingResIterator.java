@@ -73,7 +73,10 @@ import com.hp.hpl.jena.util.iterator.Filter;
 import com.hp.hpl.jena.util.iterator.Map1;
 
 /**
+ * <p>CachingResIterator class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class CachingResIterator implements ResIterator {
 
@@ -81,7 +84,10 @@ public class CachingResIterator implements ResIterator {
 	ThreadSafeModel model;
 	private List list;
 	/**
-	 * @param iterator
+	 * <p>Constructor for CachingResIterator.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param orig a {@link com.hp.hpl.jena.rdf.model.ResIterator} object.
 	 */
 	public CachingResIterator(ThreadSafeModel model, ResIterator orig) {
 		this.model = model;
@@ -94,20 +100,28 @@ public class CachingResIterator implements ResIterator {
 	}
 
 	/**
+	 * <p>hasNext.</p>
+	 *
 	 * @see java.util.Iterator#hasNext()
+	 * @return a boolean.
 	 */
 	public boolean hasNext() {
 		return iterator.hasNext();
 	}
 
 	/**
+	 * <p>nextResource.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.NodeIterator#nextNode()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 */
 	public Resource nextResource() {
 		return new ThreadSafeResource(model, (Resource) iterator.next());
 	}
 
 	/**
+	 * <p>close.</p>
+	 *
 	 * @see com.hp.hpl.jena.util.iterator.ClosableIterator#close()
 	 */
 	public void close() {
@@ -116,13 +130,18 @@ public class CachingResIterator implements ResIterator {
 	}
 
 	/**
+	 * <p>next.</p>
+	 *
 	 * @see java.util.Iterator#next()
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object next() {
 		return nextResource();
 	}
 
 	/**
+	 * <p>remove.</p>
+	 *
 	 * @see java.util.Iterator#remove()
 	 */
 	public void remove() {
@@ -130,33 +149,25 @@ public class CachingResIterator implements ResIterator {
 	}
 
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#andThen(com.hp.hpl.jena.util.iterator.ClosableIterator)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator andThen(ClosableIterator other) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#filterKeep(com.hp.hpl.jena.util.iterator.Filter)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator filterKeep(Filter f) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#filterDrop(com.hp.hpl.jena.util.iterator.Filter)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator filterDrop(Filter f) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#mapWith(com.hp.hpl.jena.util.iterator.Map1)
-	 */
+	/** {@inheritDoc} */
 	public ExtendedIterator mapWith(Map1 map1) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
@@ -164,19 +175,32 @@ public class CachingResIterator implements ResIterator {
 
 
 	/**
+	 * <p>removeNext.</p>
+	 *
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#removeNext()
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object removeNext() {
 		// TODO implement
 		return next();
 	}
 	
+	/**
+	 * <p>toList.</p>
+	 *
+	 * @return a {@link java.util.List} object.
+	 */
 	public List toList() {
 		return list;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#toSet()
+	 */
+	/**
+	 * <p>toSet.</p>
+	 *
+	 * @return a {@link java.util.Set} object.
 	 */
 	public Set toSet() {
 		return new AbstractSet() {

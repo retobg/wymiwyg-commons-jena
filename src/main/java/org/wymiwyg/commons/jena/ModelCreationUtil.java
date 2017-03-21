@@ -32,8 +32,10 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
- * @author reto
+ * <p>ModelCreationUtil class.</p>
  *
+ * @author reto
+ * @version $Id: $Id
  */
 public class ModelCreationUtil {
 
@@ -80,7 +82,9 @@ public class ModelCreationUtil {
 	
 	
 	/**
-	 * @param size
+	 * <p>createRandomModel.</p>
+	 *
+	 * @param size a int.
 	 * @return a random model of the specified number of triples
 	 */
 	public static Model createRandomModel(final int size) {

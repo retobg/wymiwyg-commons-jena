@@ -74,7 +74,10 @@ import com.hp.hpl.jena.util.iterator.Filter;
 import com.hp.hpl.jena.util.iterator.Map1;
 
 /**
+ * <p>CachingNodeIterator class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class CachingNodeIterator implements NodeIterator {
 
@@ -82,7 +85,9 @@ public class CachingNodeIterator implements NodeIterator {
 	private List list;
 
 	/**
-	 * @param iterator
+	 * <p>Constructor for CachingNodeIterator.</p>
+	 *
+	 * @param orig a {@link com.hp.hpl.jena.rdf.model.NodeIterator} object.
 	 */
 	public CachingNodeIterator(NodeIterator orig) {
 		list = new ArrayList();
@@ -94,20 +99,29 @@ public class CachingNodeIterator implements NodeIterator {
 	}
 
 	/**
+	 * <p>hasNext.</p>
+	 *
 	 * @see java.util.Iterator#hasNext()
+	 * @return a boolean.
 	 */
 	public boolean hasNext() {
 		return iterator.hasNext();
 	}
 
 	/**
+	 * <p>nextNode.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.NodeIterator#nextNode()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @throws java.util.NoSuchElementException if any.
 	 */
 	public RDFNode nextNode() throws NoSuchElementException {
 		return (RDFNode) iterator.next();
 	}
 
 	/**
+	 * <p>close.</p>
+	 *
 	 * @see com.hp.hpl.jena.util.iterator.ClosableIterator#close()
 	 */
 	public void close() {
@@ -116,40 +130,54 @@ public class CachingNodeIterator implements NodeIterator {
 	}
 
 	/**
+	 * <p>next.</p>
+	 *
 	 * @see java.util.Iterator#next()
+	 * @return a {@link java.lang.Object} object.
 	 */
 	public Object next() {
 		return iterator.next();
 	}
 
 	/**
+	 * <p>remove.</p>
+	 *
 	 * @see java.util.Iterator#remove()
 	 */
 	public void remove() {
 		iterator.remove();
 	}
 
+	/**
+	 * <p>removeNext.</p>
+	 *
+	 * @return a {@link java.lang.Object} object.
+	 */
 	public Object removeNext() {
 		Object result = iterator.next();
 		iterator.remove();
 		return result;
 	}
 
+	/** {@inheritDoc} */
 	public ExtendedIterator andThen(ClosableIterator arg0) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
+	/** {@inheritDoc} */
 	public ExtendedIterator filterKeep(Filter arg0) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
+	/** {@inheritDoc} */
 	public ExtendedIterator filterDrop(Filter arg0) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
 	}
 
+	/** {@inheritDoc} */
 	public ExtendedIterator mapWith(Map1 arg0) {
 		// TODO implement
 		throw new RuntimeException("Not yet implemented");
@@ -158,11 +186,21 @@ public class CachingNodeIterator implements NodeIterator {
 	/* (non-Javadoc)
 	 * @see com.hp.hpl.jena.util.iterator.ExtendedIterator#toList()
 	 */
+	/**
+	 * <p>toList.</p>
+	 *
+	 * @return a {@link java.util.List} object.
+	 */
 	public List toList() {
 		return list;
 	}
 
 
+	/**
+	 * <p>toSet.</p>
+	 *
+	 * @return a {@link java.util.Set} object.
+	 */
 	public Set toSet() {
 		return new AbstractSet() {
 

@@ -63,13 +63,18 @@ import com.hp.hpl.jena.rdf.model.Bag;
 import com.hp.hpl.jena.rdf.model.Container;
 
 /**
+ * <p>ThreadSafeBag class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeBag extends ThreadSafeContainer implements Bag {
 
 	/**
-	 * @param model
-	 * @param wrapped
+	 * <p>Constructor for ThreadSafeBag.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public ThreadSafeBag(ThreadSafeModel model, Container wrapped) {
 		super(model, wrapped);

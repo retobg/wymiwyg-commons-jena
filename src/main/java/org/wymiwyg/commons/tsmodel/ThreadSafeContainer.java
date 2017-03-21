@@ -65,7 +65,10 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Statement;
 
 /**
+ * <p>ThreadSafeContainer class.</p>
+ *
  * @author reto
+ * @version $Id: $Id
  */
 public class ThreadSafeContainer
 	extends ThreadSafeResource
@@ -73,8 +76,10 @@ public class ThreadSafeContainer
 
 	Container wrapped;
 	/**
-	 * @param model
-	 * @param wrapped
+	 * <p>Constructor for ThreadSafeContainer.</p>
+	 *
+	 * @param model a {@link org.wymiwyg.commons.tsmodel.ThreadSafeModel} object.
+	 * @param wrapped a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public ThreadSafeContainer(ThreadSafeModel model, Container wrapped) {
 		super(model, wrapped);
@@ -82,7 +87,10 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>isAlt.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#isAlt()
+	 * @return a boolean.
 	 */
 	public boolean isAlt() {
 		synchronized (model) {
@@ -91,7 +99,10 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>isSeq.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#isSeq()
+	 * @return a boolean.
 	 */
 	public boolean isSeq() {
 		synchronized (model) {
@@ -100,7 +111,10 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>isBag.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#isBag()
+	 * @return a boolean.
 	 */
 	public boolean isBag() {
 		synchronized (model) {
@@ -109,7 +123,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(RDFNode o) {
 		synchronized (model) {
@@ -118,7 +136,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(boolean)
+	 * @param o a boolean.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(boolean o) {
 		synchronized (model) {
@@ -127,7 +149,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(long)
+	 * @param o a long.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(long o) {
 		synchronized (model) {
@@ -136,7 +162,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(char)
+	 * @param o a char.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(char o) {
 		synchronized (model) {
@@ -145,7 +175,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(float)
+	 * @param o a float.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(float o) {
 		synchronized (model) {
@@ -154,7 +188,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(double)
+	 * @param o a double.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(double o) {
 		synchronized (model) {
@@ -162,18 +200,14 @@ public class ThreadSafeContainer
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Container#add(java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Container add(String o) {
 		synchronized (model) {
 			return wrapped.add(o);
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Container#add(java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public Container add(String o, String l) {
 		synchronized (model) {
 			return wrapped.add(o);
@@ -181,7 +215,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>add.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#add(java.lang.Object)
+	 * @param o a {@link java.lang.Object} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Container} object.
 	 */
 	public Container add(Object o) {
 		synchronized (model) {
@@ -190,7 +228,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(com.hp.hpl.jena.rdf.model.RDFNode)
+	 * @param o a {@link com.hp.hpl.jena.rdf.model.RDFNode} object.
+	 * @return a boolean.
 	 */
 	public boolean contains(RDFNode o) {
 		synchronized (model) {
@@ -199,7 +241,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(boolean)
+	 * @param o a boolean.
+	 * @return a boolean.
 	 */
 	public boolean contains(boolean o) {
 		synchronized (model) {
@@ -208,7 +254,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(long)
+	 * @param o a long.
+	 * @return a boolean.
 	 */
 	public boolean contains(long o) {
 		synchronized (model) {
@@ -217,7 +267,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(char)
+	 * @param o a char.
+	 * @return a boolean.
 	 */
 	public boolean contains(char o) {
 		synchronized (model) {
@@ -226,7 +280,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(float)
+	 * @param o a float.
+	 * @return a boolean.
 	 */
 	public boolean contains(float o) {
 		synchronized (model) {
@@ -234,9 +292,7 @@ public class ThreadSafeContainer
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Container#contains(double)
-	 */
+	/** {@inheritDoc} */
 	public boolean contains(double o) {
 		synchronized (model) {
 			return wrapped.contains(o);
@@ -244,7 +300,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(java.lang.String)
+	 * @param o a {@link java.lang.String} object.
+	 * @return a boolean.
 	 */
 	public boolean contains(String o) {
 		synchronized (model) {
@@ -252,9 +312,7 @@ public class ThreadSafeContainer
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Container#contains(java.lang.String, java.lang.String)
-	 */
+	/** {@inheritDoc} */
 	public boolean contains(String o, String l) {
 		synchronized (model) {
 			return wrapped.contains(o);
@@ -262,7 +320,11 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>contains.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#contains(java.lang.Object)
+	 * @param o a {@link java.lang.Object} object.
+	 * @return a boolean.
 	 */
 	public boolean contains(Object o) {
 		synchronized (model) {
@@ -270,9 +332,7 @@ public class ThreadSafeContainer
 		}
 	}
 
-	/**
-	 * @see com.hp.hpl.jena.rdf.model.Container#remove(com.hp.hpl.jena.rdf.model.Statement)
-	 */
+	/** {@inheritDoc} */
 	public Container remove(Statement s) {
 		synchronized (model) {
 			return wrapped.remove(s);
@@ -280,7 +340,10 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>iterator.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#iterator()
+	 * @return a {@link com.hp.hpl.jena.rdf.model.NodeIterator} object.
 	 */
 	public NodeIterator iterator() {
 		synchronized (model) {
@@ -288,7 +351,10 @@ public class ThreadSafeContainer
 	}
 
 	/**
+	 * <p>size.</p>
+	 *
 	 * @see com.hp.hpl.jena.rdf.model.Container#size()
+	 * @return a int.
 	 */
 	public int size() {
 		synchronized (model) {

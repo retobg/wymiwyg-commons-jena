@@ -41,8 +41,11 @@ import com.hp.hpl.jena.rdf.model.impl.SelectorImpl;
 import com.hp.hpl.jena.shared.JenaException;
 
 /**
+ * <p>JenaUtil class.</p>
+ *
  * @author reto
  * @date Jun 19, 2004
+ * @version $Id: $Id
  */
 public class JenaUtil {
 
@@ -114,15 +117,12 @@ public class JenaUtil {
 	 * This method removes duplicate anonymous resources that are - not the
 	 * object of a statement - have no anonymous resource as the object of a
 	 * statement
-	 * 
+	 *
 	 * A more generic variant woul be something like "Model
 	 * getMinimalIsomorphicModel(model)"
-	 * 
-	 * @param model
-	 * @param renamer
-	 * @return
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
 	 */
-
 	public static void removeSomeDuplicateAnonymous(Model model) {
 		Set anonResDescriptors = new HashSet();
 		ResIterator resourceIter = model.listSubjects();
@@ -151,6 +151,11 @@ public class JenaUtil {
 		resourceIter.close();
 	}
 
+	/**
+	 * <p>deepRemoveProperties.</p>
+	 *
+	 * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 */
 	public static void deepRemoveProperties(Resource resource) {
 		StmtIterator propertiesIter = resource.listProperties();
 		Set propertySet = new HashSet();
@@ -167,8 +172,8 @@ public class JenaUtil {
 	 * Removes the statement passed as argument as well as any property of the
 	 * object recurisively. Stops at resources that are the object o another
 	 * statement
-	 * 
-	 * @param property
+	 *
+	 * @param property a {@link com.hp.hpl.jena.rdf.model.Statement} object.
 	 */
 	public static void deepRemoveProperty(Statement property) {
 		if (!(property.getObject() instanceof Literal)) {
@@ -240,6 +245,13 @@ public class JenaUtil {
 	 * RuntimeException("model not empty"); } model.add(newModelContent); }
 	 */
 
+	/**
+	 * <p>renameNamedResources.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param renamer a {@link org.wymiwyg.commons.jena.ResourceRenamer} object.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 */
 	public static Model renameNamedResources(Model model,
 			ResourceRenamer renamer) {
 		Model result = ModelFactory.createDefaultModel();
@@ -279,10 +291,11 @@ public class JenaUtil {
 	/**
 	 * replaces any ocuurent of source in the model with target, this also means
 	 * that target get all the attributes of source.
-	 * 
-	 * @param model
-	 * @param source
-	 * @param target
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @param source a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param target a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @throws com.hp.hpl.jena.shared.JenaException if any.
 	 */
 	public static void replace(Model model, Resource source, Resource target)
 			throws JenaException {
@@ -317,14 +330,24 @@ public class JenaUtil {
 		}
 	}
 
+	/**
+	 * <p>getExpandedResource.</p>
+	 *
+	 * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param expansion a int.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 */
 	public static Model getExpandedResource(Resource resource, int expansion) {
 		return getExpandedResource(resource, expansion, true);
 	}
 
 	/**
-	 * @param resource
-	 * @param expansion
+	 * <p>getExpandedResource.</p>
+	 *
+	 * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
+	 * @param expansion a int.
 	 * @return Model
+	 * @param stopAtResWithName a boolean.
 	 */
 	public static Model getExpandedResource(Resource resource, int expansion,
 			boolean stopAtResWithName) {
@@ -332,12 +355,14 @@ public class JenaUtil {
 	}
 
 	/**
-	 * @param resource
-	 * @param i
-	 * @param b
+	 * <p>getExpandedResource.</p>
+	 *
+	 * @param resource a {@link com.hp.hpl.jena.rdf.model.Resource} object.
 	 * @param validProperties
 	 *            null means that properties of any type are allowed
-	 * @return
+	 * @param expansion a int.
+	 * @param stopAtResWithName a boolean.
+	 * @return a {@link com.hp.hpl.jena.rdf.model.Model} object.
 	 */
 	public static Model getExpandedResource(Resource resource, int expansion,
 			boolean stopAtResWithName, Set validProperties) {
@@ -460,6 +485,13 @@ public class JenaUtil {
 
 	/*
 	 * @return the roots of the trees in themodel
+	 */
+	/**
+	 * <p>getRoots.</p>
+	 *
+	 * @param model a {@link com.hp.hpl.jena.rdf.model.Model} object.
+	 * @return an array of {@link com.hp.hpl.jena.rdf.model.Resource} objects.
+	 * @throws com.hp.hpl.jena.shared.JenaException if any.
 	 */
 	public static Resource[] getRoots(Model model) throws JenaException {
 		if (log.isDebugEnabled()) {
