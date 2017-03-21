@@ -30,7 +30,6 @@ import com.hp.hpl.jena.vocabulary.DC;
  * <p>Test class.</p>
  *
  * @author reto
- * @date Jun 1, 2004
  * @version $Id: $Id
  */
 public class Test {

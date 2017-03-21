@@ -44,7 +44,6 @@ import com.hp.hpl.jena.shared.JenaException;
  * <p>JenaUtil class.</p>
  *
  * @author reto
- * @date Jun 19, 2004
  * @version $Id: $Id
  */
 public class JenaUtil {

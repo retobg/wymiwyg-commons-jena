@@ -123,7 +123,6 @@ public class ThreadSafeStatement implements Statement {
 	/**
 	 * <p>changeObject.</p>
 	 *
-	 * @see com.hp.hpl.jena.rdf.model.Statement#changeObject(char)
 	 * @param o a char.
 	 * @return a {@link com.hp.hpl.jena.rdf.model.Statement} object.
 	 */

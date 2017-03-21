@@ -62,7 +62,6 @@ import com.hp.hpl.jena.vocabulary.VCARD;
  * same type and language
  *
  * @author reto
- * @date Jun 1, 2004
  * @version $Id: $Id
  */
 public class Serializer {
