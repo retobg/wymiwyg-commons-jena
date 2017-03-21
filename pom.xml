@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <artifactId>wymiwyg</artifactId>
     <groupId>org.wymiwyg</groupId>
@@ -7,12 +7,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.wymiwyg</groupId>
   <artifactId>wymiwyg-commons-jena</artifactId>
-  <version>0.5.4-SNAPSHOT</version>
+  <version>0.5.4</version>
   <description>tools for rdf with jena</description>
   <scm>
     <developerConnection>scm:git:git@github.com:retog/wymiwyg-commons-jena.git</developerConnection>
     <connection>scm:git:https://github.com/retog/wymiwyg-commons-jena.git</connection>
     <url>https://github.com/retog/wymiwyg-commons-jena</url>
+    <tag>wymiwyg-commons-jena-0.5.4</tag>
   </scm>
   <build>
     <plugins>
