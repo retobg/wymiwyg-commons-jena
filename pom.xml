@@ -9,6 +9,11 @@
   <artifactId>wymiwyg-commons-jena</artifactId>
   <version>0.5.4-SNAPSHOT</version>
   <description>tools for rdf with jena</description>
+  <scm>
+    <developerConnection>scm:git:git@github.com:retog/wymiwyg-commons-jena.git</developerConnection>
+    <connection>scm:git:https://github.com/retog/wymiwyg-commons-jena.git</connection>
+    <url>https://github.com/retog/wymiwyg-commons-jena</url>
+  </scm>
   <build>
     <plugins>
       <plugin>
